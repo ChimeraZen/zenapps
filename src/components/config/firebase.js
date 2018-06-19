@@ -1,6 +1,6 @@
-// firebase.js
-
-import firebase from 'firebase';
+import firebase from 'firebase'
+import 'firebase/auth'
+import 'firebase/database'
 
 const config = { 
   // Initialize Firebase
@@ -10,8 +10,8 @@ const config = {
     projectId: "cms-react-4351a",
     storageBucket: "cms-react-4351a.firebaseapp.com",
     messagingSenderId: "485810680215"
-};
-firebase.initializeApp(config);
-export const provider = new firebase.auth.GoogleAuthProvider();
-export const auth = firebase.auth();
-export default firebase;
+}
+firebase.initializeApp(config)
+export const provider = new firebase.auth.GoogleAuthProvider()
+export const auth = firebase.auth()
+export default firebase
