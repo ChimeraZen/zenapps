@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import {  AppBar,
-          Divider,
           Drawer,
           Hidden,
           IconButton,
@@ -17,15 +16,6 @@ import SideBar from './SideBar'
 const drawerWidth = 240
 
 const styles = theme => ({
-  root: {
-    flexGrow: 1,
-    height: '100%',
-    zIndex: 1,
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex',
-    width: '100%',
-  },
   
   appBar: {
     position: 'absolute',
@@ -55,14 +45,55 @@ const styles = theme => ({
     },
   },
   
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
+  avatar: {
+    width: 150,
+    height: 150,
+    margin: '10px auto'
+  },
+  
+  button: {
+    padding: '10px'
+  },
+  
+  quickLinks: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '32px'
+  },
+  
+  listItem: {
+    padding: 0
+  },
+  menu: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.palette.background.paper
+  },
+  
+  anchor: {
+    textDecoration: 'none',
+    color: 'inherit'
+  },
+  
+  list: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '32px'
+  },
+  
+  nested: {
+    paddingLeft: theme.spacing.unit
+  },
+  progress: {
+    width: '100%',
+    margin: '0 auto'
   }
 })
 
-class FrontPage extends React.Component {
+class ZenAppBar extends React.Component {
   state = {
     mobileOpen: false
   }
@@ -73,15 +104,13 @@ class FrontPage extends React.Component {
 
   render() {
     const { classes, theme } = this.props
-    const drawer = (
-      <SideBar />
-    )
+    const drawer = <SideBar />
 
+    
     return (
-      <div className={classes.root}>
+      <React.Fragment>
         <AppBar className={classes.appBar}>
           <Toolbar>
-            
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -92,7 +121,7 @@ class FrontPage extends React.Component {
             </IconButton>
             
             <Typography variant="title" color="inherit" noWrap>
-              Zen Apps
+              {this.props.title}
             </Typography>
           </Toolbar>
         </AppBar>
@@ -125,21 +154,14 @@ class FrontPage extends React.Component {
             {drawer}
           </Drawer>
         </Hidden>
-        
-        <main className={classes.content}>
-          <div className={classes.toolbar} />
-          <Typography noWrap>
-            {'This is where the interface will go'}
-          </Typography>
-        </main>
-      </div>
+      </React.Fragment>
     )
   }
 }
 
-FrontPage.propTypes = {
+ZenAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired
 }
 
-export default withStyles(styles, { withTheme: true })(FrontPage)
+export default withStyles(styles, { withTheme: true })(ZenAppBar)
