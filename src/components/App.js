@@ -14,7 +14,6 @@ import '../assets/css/styles.css'
 import { 
   MuiThemeProvider, 
   createMuiTheme, 
-  createBreakpoints 
 } from '@material-ui/core/styles'
 
 import { 
@@ -37,11 +36,15 @@ const breakpointValues = {
   xxl: 2560,
 }
 
+const fontFamilies = {
+}
+
 const palette = {
+  divider: 'rgba(27,94,32, 0.12)',
   primary: {
     light: green[300],
     main: green[500],
-    dark: '#002884',
+    dark: '#003300',
     contrastText: '#fff',
   },
   secondary: {
@@ -56,7 +59,13 @@ const theme = createMuiTheme({
   breakpoints: { 
     values: breakpointValues 
   },
-  palette: palette
+  palette: palette,
+  typography: {
+    "fontFamily": "'Encode Sans Condensed', sans-serif",
+    subheading: {
+      "fontFamily": "'Roboto', sans-serif",
+    }
+  }
 })
 
 const App = () =>

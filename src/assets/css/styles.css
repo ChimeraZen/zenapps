@@ -5,3 +5,7 @@
   width: 100vw;
   height: 100vh;
 }
+
+.react-swipeable-view-container {
+  height: 100%;
+}

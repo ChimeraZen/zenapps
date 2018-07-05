@@ -8,6 +8,7 @@ import { db, storage } from '../config/firebase/firebase'
 import ZenAppBar from '../components/ZenAppBar'
 import Content from '../components/Content'
 import FeaturedQuote from '../components/FeaturedQuote'
+import ZenStepper from '../components/ZenStepper'
 
 
 // Styles
@@ -23,9 +24,15 @@ const styles = theme => ({
     flexGrow: 1,
     width: '100%',
     height: '100vh',
-    fontFamily: "'Roboto', sans-serif",
+    fontFamily: "'Encode Sans Condensed', sans-serif",
     zIndex: 1,
     overflow: 'hidden',
+  },
+  
+  subroot: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
   },
   
   content: {
@@ -39,7 +46,7 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
-    height: '500px',
+    height: '33vh',
     overflow: 'hidden',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
@@ -93,42 +100,20 @@ export class FrontPage extends React.Component {
               <ZenAppBar title={this.state.page.title} />
               {
                 this.state !== null
-                  ? <Content>
-                      <Paper className={classes.content} elevation={0}>
-                        <div className={classes.featuredImageContainer} style={{backgroundImage: 'url(' + this.state.page.featuredImage + ')'}}>
-                          <FeaturedQuote author="Yamamoto Tsunetomo">
-                            When one is writing a letter, he should think that the recipient will make it into a hanging scroll.
-                          </FeaturedQuote>
-                        </div>
-                        {/*
-                        <Paper className={classes.section} elevation={0}>
-                            <Typography className={classes.headline} variant="headline" component="h2">
-                              Who Am I?
-                            </Typography>
-                            <Typography component="p" paragraph>
-                              Born and raised in Ontario, Canada, I've spent the last 20 years watching the progression of the internet age.
-                            </Typography>
-                            <Typography component="p" paragraph>
-                              In-between watching episodes of "The Fresh Prince of Bel-air" and "Saved by the Bell", and cooking some pizza pockets, I was introduced to the internet. Once the squealing squelches of the dial-up modem subsided and the perils of a picked-up telephone became common, I promptly dove into the sea of information before me.
-                            </Typography>
-                            <Typography component="p" paragraph>
-                              Beginning in the city of Geo (Geocities), I was exposed to the incredible possibilities that exist within the interconnected framework of the internet. I realized that anything I wanted to know or show the world was just a mouse-click away.
-                            </Typography>
-                            <Typography component="p" paragraph>
-                              It didn't take long to realize that blinking text and midi-heavy pages might seem "cool", but from a User Experience stand-point, it's a terribly awful experience!!
-                            </Typography>
-                            <Typography component="p">
-                              Since then, I've expanded my skillset to include, among other things, HTML5, CSS3 & preprocessors, PHP & MySQL, and Joomla/WordPress.
-                            </Typography>
+                  ? <div className={classes.interface}>
+                      <div className={classes.toolbarTheme} />
+                      <div className={classes.subroot}>
+                        <Paper className={classes.content} elevation={0}>
+                          <div className={classes.featuredImageContainer} style={{backgroundImage: 'url(' + this.state.page.featuredImage + ')'}}>
+                            <FeaturedQuote author="Yamamoto Tsunetomo">
+                              When one is writing a letter, he should think that the recipient will make it into a hanging scroll.
+                            </FeaturedQuote>
+                          </div>
                         </Paper>
-                        */}
-                        <Paper className={classes.section} elevation={0}>
-                          <Typography className={classes.headline} variant="headline" component="h2">
-                            Skillsets
-                          </Typography>
-                        </Paper>
-                      </Paper>
-                    </Content>
+                        <ZenStepper />
+                      </div>
+                    </div>
+                    
 
                   : <CircularProgress className={classes.progress} size={50} />
               }

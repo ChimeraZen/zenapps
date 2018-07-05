@@ -12,19 +12,18 @@ const styles = theme => ({
     height: 'calc(100% - 64px)',
     flexGrow: 1,
     overflow: 'auto',
-    backgroundColor: theme.palette.background.default
   },
 })
 
 const Content = (props) => {
   const { classes } = props
   return (
-    <div>
+    <React.Fragment>
       <div className={classes.toolbarTheme} />
       <section className={classes.content}>
         {props.children}
       </section>
-    </div>
+    </React.Fragment>
   )
 }
 

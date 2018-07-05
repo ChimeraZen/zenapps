@@ -140,7 +140,7 @@ class About extends React.Component {
                     </Typography>
                   </Paper>
                   <Paper className={classes.section} elevation={1}>
-                    <Typography className={classes.paragraph} className={classes.headline} variant="headline" component="h2">
+                    <Typography className={classes.headline} variant="headline" component="h2">
                       Once upon another time
                     </Typography>
                     <Typography className={classes.paragraph} component="p" paragraph>
