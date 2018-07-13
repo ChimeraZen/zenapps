@@ -1,0 +1,19 @@
+.grid-list-view.list {
+  width: stretch;
+  padding: 0;
+  list-style-type: none;
+}
+.grid-list-view.list>li:first-child {
+  font-size: 18px;
+  border-bottom: 1px solid #2D333B;
+  text-transform: capitalize;
+}
+.grid-list-view.list li {
+  display: flex;
+  padding: 0 10px;
+}
+.grid-list-view.list p {
+  display: inline-block;
+  margin: 10px 0;
+  text-transform: capitalize;
+}

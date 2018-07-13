@@ -1,0 +1,18 @@
+.grid-list-options i {
+  display: inline-flex;
+  margin-right: 7px;
+  padding: 1px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.1s ease-out;
+}
+.grid-list-options i.active {
+  border-bottom: 1px solid deepskyblue;
+}
+.grid-list-options i:last-child {
+  margin-right: 0;
+}
+.grid-list-options i:hover {
+  color: #33abf4;
+  transition: all 0.2s ease-in;
+}

@@ -1,11 +1,11 @@
 {
   "name": "zenapps",
-  "version": "0.0.2",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^1.2.1",
+    "@material-ui/core": "^1.3.1",
     "@material-ui/icons": "^1.1.0",
-    "firebase": "^5.0.4",
+    "firebase": "^5.2.0",
     "g": "^2.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

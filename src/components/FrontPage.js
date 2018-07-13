@@ -5,8 +5,9 @@ import { db, storage } from '../config/firebase/firebase'
 
 
 // Components
-import ZenAppBar from '../components/ZenAppBar'
-import Content from '../components/Content'
+import About from '../components/About'
+import AllPrograms from '../components/AllPrograms'
+import Credentials from '../components/Credentials'
 import FeaturedQuote from '../components/FeaturedQuote'
 import ZenStepper from '../components/ZenStepper'
 
@@ -14,7 +15,6 @@ import ZenStepper from '../components/ZenStepper'
 // Styles
 import {  CircularProgress,
           Paper,
-          Typography,
           withStyles } from '@material-ui/core'
 
 const styles = theme => ({
@@ -46,7 +46,7 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
-    height: '33vh',
+    padding: '28px 0',
     overflow: 'hidden',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
@@ -93,32 +93,23 @@ export class FrontPage extends React.Component {
   
   render() {
     const { classes } = this.props
+    
     return (
       this.state !== null
-        ? (
-            <div className={classes.root}>
-              <ZenAppBar title={this.state.page.title} />
-              {
-                this.state !== null
-                  ? <div className={classes.interface}>
-                      <div className={classes.toolbarTheme} />
-                      <div className={classes.subroot}>
-                        <Paper className={classes.content} elevation={0}>
-                          <div className={classes.featuredImageContainer} style={{backgroundImage: 'url(' + this.state.page.featuredImage + ')'}}>
-                            <FeaturedQuote author="Yamamoto Tsunetomo">
-                              When one is writing a letter, he should think that the recipient will make it into a hanging scroll.
-                            </FeaturedQuote>
-                          </div>
-                        </Paper>
-                        <ZenStepper />
-                      </div>
-                    </div>
-                    
-
-                  : <CircularProgress className={classes.progress} size={50} />
-              }
-            </div>
-          )
+        ? <React.Fragment>
+            <Paper className={classes.content} elevation={0}>
+              <div className={classes.featuredImageContainer} style={{backgroundImage: 'url(' + this.state.page.featuredImage + ')'}}>
+                <FeaturedQuote author="Yamamoto Tsunetomo">
+                  When one is writing a letter, he should think that the recipient will make it into a hanging scroll.
+                </FeaturedQuote>
+              </div>
+            </Paper>
+            <ZenStepper>
+              <Credentials />
+              <About />
+              <AllPrograms />
+            </ZenStepper>
+          </React.Fragment>
         : <CircularProgress className={classes.progress} size={50} />
     )
   }
@@ -129,4 +120,3 @@ FrontPage.propTypes = {
 }
 
 export default withStyles(styles)(FrontPage)
-

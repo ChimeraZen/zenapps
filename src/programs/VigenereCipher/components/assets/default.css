@@ -1,0 +1,176 @@
+#react-vigenere-cipher {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 502px;
+  font-family: 'Nunito', sans-serif;
+  border-right: 1px solid #4ea5e3;
+  border-bottom: 1px solid #4ea5e3;
+  border-left: 1px solid #4ea5e3;
+  /* Header */
+  /* App Options */
+  /* Mode Styles */
+  /* Light Theme */ }
+  #react-vigenere-cipher .header h2 {
+    text-align: center; }
+  #react-vigenere-cipher .app-options {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1; }
+    #react-vigenere-cipher .app-options i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.05rem;
+      height: 2.05rem;
+      margin-left: auto;
+      cursor: pointer;
+      transition: all .3s ease-out; }
+      #react-vigenere-cipher .app-options i:hover {
+        color: #FFF;
+        background: #4ea5e3;
+        transition: all .3s ease-out; }
+    #react-vigenere-cipher .app-options .panel {
+      display: flex;
+      flex-direction: column;
+      max-height: 0px;
+      overflow: hidden;
+      border-left: 5px solid #4ea5e3;
+      background: #FFF;
+      box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.75);
+      transition: max-height .25s ease-in-out; }
+      #react-vigenere-cipher .app-options .panel li {
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        padding: 3px; }
+      #react-vigenere-cipher .app-options .panel .input-slider {
+        position: relative;
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 82px;
+        padding: 2px;
+        font-size: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 50px;
+        background: #333; }
+        #react-vigenere-cipher .app-options .panel .input-slider .input-on {
+          color: #26ca28;
+          padding-top: 1px;
+          user-select: none; }
+        #react-vigenere-cipher .app-options .panel .input-slider .input-off {
+          color: #ff1919;
+          padding-top: 1px;
+          user-select: none; }
+        #react-vigenere-cipher .app-options .panel .input-slider .input-slider-bar {
+          position: absolute;
+          display: inline-block;
+          left: 5%;
+          width: 36px;
+          height: 15px;
+          border-radius: 50px;
+          transition: all .1s ease-out;
+          z-index: 1;
+          background: #ddd; }
+          #react-vigenere-cipher .app-options .panel .input-slider .input-slider-bar.on {
+            background: #26ca28;
+            left: 54%;
+            transition: all .25s ease-out; }
+    #react-vigenere-cipher .app-options.expand i {
+      color: #FFF;
+      background: #4ea5e3;
+      transition: all .3s ease-out; }
+    #react-vigenere-cipher .app-options.expand .panel {
+      max-height: 500px;
+      transition: max-height .5s ease-in-out; }
+    #react-vigenere-cipher .app-options ul {
+      list-style-type: none; }
+  #react-vigenere-cipher .mode {
+    display: flex; }
+    #react-vigenere-cipher .mode span {
+      width: stretch;
+      color: #333;
+      padding: 10px 0;
+      text-align: center;
+      cursor: pointer;
+      border-top: 1px solid #4ea5e3;
+      border-bottom: 1px solid #4ea5e3;
+      background: #FFF;
+      transition: background .25s ease-in-out; }
+      #react-vigenere-cipher .mode span.active {
+        color: #FFF;
+        background: #3c8bc2;
+        transition: background .25s ease-in-out; }
+      #react-vigenere-cipher .mode span:hover {
+        color: #FFF;
+        background: #4ea5e3;
+        transition: background .25s ease-in-out; }
+  #react-vigenere-cipher .submit {
+    display: flex;
+    justify-content: space-evenly;
+    width: stretch; }
+  #react-vigenere-cipher form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px; }
+    #react-vigenere-cipher form label {
+      position: relative;
+      display: inline-flex;
+      width: 49%;
+      margin-bottom: 10px;
+      border-radius: 5px; }
+      #react-vigenere-cipher form label p {
+        position: absolute;
+        top: -8px;
+        left: 10px;
+        font-size: 12px;
+        padding: 0 5px;
+        border-radius: 5px;
+        background: #FFF; }
+      #react-vigenere-cipher form label textarea {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        border: 1px solid #4ea5e3;
+        border-radius: 5px;
+        box-shadow: 0 0 1px 1px transparent;
+        resize: none;
+        transition: all .1s ease-in-out; }
+        #react-vigenere-cipher form label textarea:focus {
+          outline: none;
+          box-shadow: 0 0 1px 1px #3c8bc2;
+          transition: all .3s ease-in-out; }
+    #react-vigenere-cipher form input {
+      width: stretch;
+      padding: 10px;
+      border: 1px solid #4ea5e3;
+      border-radius: 5px;
+      box-shadow: 0 0 1px 1px transparent;
+      transition: all .1s ease-in-out; }
+      #react-vigenere-cipher form input:focus {
+        outline: none;
+        box-shadow: 0 0 1px 1px #3c8bc2;
+        transition: all .3s ease-in-out; }
+      #react-vigenere-cipher form input :invalid {
+        box-shadow: 0 0 1px 1px red;
+        transition: all .3s ease-in-out; }
+    #react-vigenere-cipher form button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      padding: 10px 0;
+      border: 1px solid #3c8bc2;
+      cursor: pointer;
+      background: #FFF;
+      transition: all .3s ease-in-out; }
+      #react-vigenere-cipher form button:hover {
+        color: #FFF;
+        background: #3c8bc2;
+        transition: all .3s ease-in-out; }
+  #react-vigenere-cipher.light {
+    border-top: 3px solid #3c8bc2; }

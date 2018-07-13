@@ -1,0 +1,12 @@
+.grid-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  background: #2D333B;
+}
+
+.grid-list-header h2 {
+  margin: 0;
+  font-size: 2em;
+}

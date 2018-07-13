@@ -1,0 +1,65 @@
+.data-trunk {
+  display: inline-block;
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.data-trunk h2 {
+  font-weight: bold;
+  margin-top: 0;
+  border-bottom: 3px solid green;
+}
+
+.data-trunk>.data-tree {
+  margin-left: 0;
+}
+
+.data-tree {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.data-tree li {
+  list-style-type: none;
+}
+
+.data-tree li>i {
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: 13px;
+  vertical-align: middle;
+  transition: transform .25s ease-in;
+}
+
+.data-tree li p {
+  display: inline-block;
+  padding: 5px 3px 5px 5px;
+  border-left: 2px solid green;
+  margin: 0;
+}
+
+.data-tree .data-container {
+  overflow: hidden;
+}
+
+.data-tree .data-container .data-tree {
+  max-height: 0;
+  margin-left: 20px;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  border-left: 2px solid #ddd;
+}
+
+.data-tree .data-container.expand>i {
+  transform: rotate(90deg);
+  transition: transform .25s ease-out;
+}
+
+.data-tree .data-container.expand>.data-tree {
+  max-height: 1000px;
+  transition: max-height 0.8s ease-in-out;
+}

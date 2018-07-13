@@ -1,0 +1,14 @@
+.grid-list-view {
+  width: stretch;
+  color: white;
+  background: #20262E;
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+.grid-list-view:not(.list):not(.grid) {
+  padding: 20px;
+}
+.grid-list-view.loading {
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}

@@ -23,9 +23,7 @@ import {
 
 
 // Pages
-import FrontPage from '../pages/FrontPage'
-import Credentials from '../pages/Credentials'
-import About from '../pages/About'
+import FrontPages from '../pages/FrontPages'
 
 const breakpointValues = {
   xs: 0,
@@ -34,9 +32,6 @@ const breakpointValues = {
   lg: 1280,
   xl: 1920,
   xxl: 2560,
-}
-
-const fontFamilies = {
 }
 
 const palette = {
@@ -74,9 +69,7 @@ const App = () =>
       <MuiThemeProvider theme={theme}>
         <React.Fragment>
           <CssBaseline />
-          <Route exact path={routes.PUBLIC_LANDING} component={() => <FrontPage />} />
-          <Route exact path={routes.CREDENTIALS} component={() => <Credentials />} />
-          <Route exact path={routes.ABOUT_PAGE} component={() => <About />} />
+          <Route path={routes.PUBLIC_LANDING} component={() => <FrontPages />} />
         </React.Fragment>
       </MuiThemeProvider>
   </Router>
