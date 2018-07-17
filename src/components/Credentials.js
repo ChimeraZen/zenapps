@@ -32,6 +32,11 @@ const styles = theme => ({
     fontWeight: 700,
     textTransform: 'uppercase'
   },
+  
+  row: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
 })
 
 class Credentials extends React.Component {

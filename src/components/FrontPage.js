@@ -45,11 +45,16 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
-    maxHeight: '200px',
     padding: '28px 0',
     overflow: 'hidden',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
+    [theme.breakpoints.up('xs')]: {
+      maxHeight: '117px',
+    },
+    [theme.breakpoints.up('sm')]: {
+      maxHeight: '200px',
+    },
   },
   
   headline: {

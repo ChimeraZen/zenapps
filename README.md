@@ -3,7 +3,7 @@
 ---  
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.1.0](#v110)  
+**Version**:      [1.1.1](#v111)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps.org
 
@@ -20,16 +20,19 @@
 
 
 ## ChangeLog
-### v0.0.1
-* Setup initial app layout and menu structure
-* Added routing system
-* Created SideBarContact to showcase profile image and quick external links
-* Created SideBarMenu as the primary navigation
+### v1.1.1
+* Reordered README ChangeLog
+* Credentials Component
+  * Replaced missing style for row class
+* FrontPage Component
+  * Reduced featured image's max-height when viewport is below 600px width
 
 
-### v0.0.2
-* Updated config
-* Updated .gitignore
+### v1.1.0
+* Added viewport breakpoints
+* Improved responsive design
+* Replaced ? with && in this.state !== null
+* Reduced calls and improved performance
 
 
 ### v1.0.1
@@ -52,8 +55,13 @@
   * Vigenere Cipher
 
 
-### v1.1.0
-* Added viewport breakpoints
-* Improved responsive design
-* Replaced ? with && in this.state !== null
-* Reduced calls and improved performance
+### v0.0.2
+* Updated config
+* Updated .gitignore
+
+
+### v0.0.1
+* Setup initial app layout and menu structure
+* Added routing system
+* Created SideBarContact to showcase profile image and quick external links
+* Created SideBarMenu as the primary navigation
