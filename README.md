@@ -1,10 +1,9 @@
 # ZenApps.org
 
-SYSTEM STILL UNDER DEVELOPMENT - CREATE-REACT-APP PRE-BUILD  
 ---  
-**Description**:  ZenApps.org is a React.js website to showcase my personal projects
+**Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.0.1](#v101)  
+**Version**:      [1.1.0](#v110)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps.org
 
@@ -14,6 +13,8 @@ SYSTEM STILL UNDER DEVELOPMENT - CREATE-REACT-APP PRE-BUILD
 **NPM Packages**:  
 * create-react-app
 * react-router-dom
+* firebase
+* swipeable-react-views
 * @material-ui/core
 * @material-ui/icons
 
@@ -49,3 +50,10 @@ SYSTEM STILL UNDER DEVELOPMENT - CREATE-REACT-APP PRE-BUILD
   * Data Tree
   * Grid-List View
   * Vigenere Cipher
+
+
+### v1.1.0
+* Added viewport breakpoints
+* Improved responsive design
+* Replaced ? with && in this.state !== null
+* Reduced calls and improved performance

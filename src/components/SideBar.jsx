@@ -6,7 +6,6 @@ import { storage } from '../config/firebase/firebase'
 import { NavLink } from 'react-router-dom'
 
 import {  Avatar,
-          CircularProgress,
           Collapse,
           Divider,
           IconButton,
@@ -111,7 +110,7 @@ class SideBar extends React.Component {
                   alt={this.props.params.name} 
                   src={this.state.avatar}
                   className={classes.avatar} />
-              : <CircularProgress className={classes.progress} size={50} />
+              : null
             }
 
             <Typography variant="display1">

@@ -7,32 +7,26 @@ import { NavLink } from 'react-router-dom'
 // Styles
 import {  Card,
           CardContent,
-          CircularProgress,
           Divider,
           Paper,
           Typography,
           withStyles } from '@material-ui/core'
 
 const styles = theme => ({
-  root: {
+  content: {
     display: 'flex',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
     flexWrap: 'wrap',
-    flexGrow: 1,
-    width: '100%',
-    height: '100%',
-    paddingTop: '3%',
+    padding: '15px',
     background: 'inherit',
-    overflow: 'hidden',
-    zIndex: 1,
   },
   
   card: {
     display: 'flex',
     flexWrap: 'wrap',
-    maxWidth: '30%',
-    minWidth: '200px',
-    height: 'fit-content',
+    flexBasis: '300px',
+    minWidth: '300px',
+    margin: '15px',
   },
 })
 
@@ -54,33 +48,30 @@ export class AllPrograms extends React.Component {
   
   render() {
     const { classes } = this.props
-    console.log(this.state)
+    
     return (
-      this.state !== null
-        ? <Paper className={classes.root} elevation={0}>
-            {
-              this.state.programs.map((program, i) =>
-                <Card className={classes.card} elevation={1}>
-                  <CardContent className={classes.cardContent}>
-                    <NavLink key={"program" + i} to={program.link} className={classes.anchor}>
-                      <Typography className={classes.position} variant="title" component="h3">
-                        {program.title}
-                      </Typography>
-                    </NavLink>
-                    <Typography className={classes.position} variant="caption">
-                      {program.version}
-                    </Typography>
-                    <Divider />
+      this.state !== null &&
+        <Paper className={classes.content} elevation={0}>
+          {this.state.programs.map((program, i) =>
+            <Card key={"program" + i} className={classes.card} elevation={1}>
+              <CardContent className={classes.cardContent}>
+                <NavLink to={program.link} className={classes.anchor}>
+                  <Typography className={classes.position} variant="title" component="h3">
+                    {program.title}
+                  </Typography>
+                </NavLink>
+                <Typography className={classes.position} variant="caption">
+                  {program.version}
+                </Typography>
+                <Divider />
 
-                    <Typography className={classes.description}>
-                      {program.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              )
-            }
-          </Paper>
-        : <CircularProgress className={classes.progress} size={50} />
+                <Typography className={classes.description}>
+                  {program.description}
+                </Typography>
+              </CardContent>
+            </Card>
+          )}
+        </Paper>
     )
   }
 }

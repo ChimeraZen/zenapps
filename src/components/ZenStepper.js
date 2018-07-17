@@ -10,10 +10,7 @@ import SwipeableViews from 'react-swipeable-views'
 
 // Styles
 import {  Button,
-          Divider,
           MobileStepper,
-          Paper,
-          Typography,
           withStyles } from '@material-ui/core'
 
 import {  KeyboardArrowLeft,
@@ -80,18 +77,6 @@ class SwipeableTextMobileStepper extends React.Component {
 
     const components = this.props.children
     const maxSteps = components.length
-    
-    /*
-    const activeContent = items.map((item, index) => (
-      <Paper key={'item' + index} className={classes.content} square elevation={0}>
-        {item.content.map((content, index) => (
-          <Typography key={content + index} className={classes.paragraph} component="p" paragraph>
-            {content}
-          </Typography>
-        ))}
-      </Paper>
-    ))
-    */
     
     return (
       <div className={classes.root}>

@@ -13,8 +13,7 @@ import ZenStepper from '../components/ZenStepper'
 
 
 // Styles
-import {  CircularProgress,
-          Paper,
+import {  Paper,
           withStyles } from '@material-ui/core'
 
 const styles = theme => ({
@@ -46,6 +45,7 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
+    maxHeight: '200px',
     padding: '28px 0',
     overflow: 'hidden',
     backgroundRepeat: 'no-repeat',
@@ -95,22 +95,22 @@ export class FrontPage extends React.Component {
     const { classes } = this.props
     
     return (
-      this.state !== null
-        ? <React.Fragment>
-            <Paper className={classes.content} elevation={0}>
-              <div className={classes.featuredImageContainer} style={{backgroundImage: 'url(' + this.state.page.featuredImage + ')'}}>
-                <FeaturedQuote author="Yamamoto Tsunetomo">
-                  When one is writing a letter, he should think that the recipient will make it into a hanging scroll.
-                </FeaturedQuote>
-              </div>
-            </Paper>
-            <ZenStepper>
-              <Credentials />
-              <About />
-              <AllPrograms />
-            </ZenStepper>
-          </React.Fragment>
-        : <CircularProgress className={classes.progress} size={50} />
+      <React.Fragment>
+        {this.state !== null &&
+          <Paper className={classes.content} elevation={0}>
+            <div className={classes.featuredImageContainer} style={{backgroundImage: 'url(' + this.state.page.featuredImage + ')'}}>
+              <FeaturedQuote author="Yamamoto Tsunetomo">
+                When one is writing a letter, he should think that the recipient will make it into a hanging scroll.
+              </FeaturedQuote>
+            </div>
+          </Paper>
+        }
+        <ZenStepper>
+          <Credentials />
+          <About />
+          <AllPrograms />
+        </ZenStepper>
+      </React.Fragment>
     )
   }
 }

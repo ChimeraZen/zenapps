@@ -68,6 +68,14 @@ const styles = theme => ({
     margin: '0 auto'
   },
   
+  progressRoot: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
+  },
+  
   toolbarTheme: theme.mixins.toolbar,
 })
 
@@ -160,7 +168,7 @@ class FrontPages extends React.Component {
       )
     } else {
       return (
-        <div className={classes.root}>
+        <div className={classes.progressRoot}>
           <CircularProgress className={classes.progress} size={50} />
         </div>
       )
