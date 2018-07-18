@@ -1,9 +1,8 @@
 # ZenApps.org
-
----  
+  
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.1.3](#v113)  
+**Version**:      [1.1.4](#v114)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps.org
 
@@ -20,8 +19,15 @@
 
 
 ## ChangeLog
+### v1.1.4
+* Added "apple-mobile-web-app-capable" meta to index.html
+* Modified body height to calc(100% + 1px) to allow user to hide/show toolbar by scrolling
+* Updated manifest.json short_name and name
+* Added meta to line in README ChangeLog v1.1.3
+
+
 ### v1.1.3
-* Added "mobile-web-app-capable" to index.html
+* Added "mobile-web-app-capable" meta to index.html
 
 
 ### v1.1.2
