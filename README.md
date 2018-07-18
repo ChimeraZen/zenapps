@@ -3,7 +3,7 @@
 ---  
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.1.2](#v112)  
+**Version**:      [1.1.3](#v113)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps.org
 
@@ -20,6 +20,10 @@
 
 
 ## ChangeLog
+### v1.1.3
+* Added "mobile-web-app-capable" to index.html
+
+
 ### v1.1.2
 * Removed console.log from Grid-List View
 * Added styles to force mobile devices to hide their respective browser toolbars
