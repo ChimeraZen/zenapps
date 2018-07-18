@@ -17,6 +17,7 @@ import {  Avatar,
           withStyles } from '@material-ui/core'
 
 import BuildIcon from '@material-ui/icons/Build'
+import GestureIcon from '@material-ui/icons/Gesture'
 import SchoolIcon from '@material-ui/icons/School'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import { ExpandLess, ExpandMore } from '@material-ui/icons'
@@ -145,6 +146,19 @@ class SideBar extends React.Component {
           className={classes.root}
           component="nav"
         >
+          {/*
+          <NavLink to='/guides' className={classes.anchor}>
+            <ListItem button>
+              <ListItemIcon>
+                <GestureIcon />
+              </ListItemIcon>
+              <ListItemText inset>
+                Guides
+              </ListItemText>
+            </ListItem>
+          </NavLink>
+          */}
+          
           <NavLink to='/credentials' className={classes.anchor}>
             <ListItem button>
               <ListItemIcon>

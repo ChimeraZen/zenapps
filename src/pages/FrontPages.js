@@ -3,10 +3,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Switch, Route } from 'react-router-dom'
 import { db } from '../config/firebase/firebase'
+import { NavLink } from 'react-router-dom'
 
 // Components
 import About from '../components/About'
 import Credentials from '../components/Credentials'
+//import Guides from '../components/Guides'
 import SideBar from '../components/SideBar'
 
 // Programs
@@ -76,6 +78,17 @@ const styles = theme => ({
     height: '100%',
   },
   
+  titleCaption: {
+    marginLeft: '10px'
+  },
+  
+  titleRow: {
+    display: 'flex',
+    alignItems: 'flex-end',
+    textDecoration: 'none',
+    color: '#FFF'
+  },
+  
   toolbarTheme: theme.mixins.toolbar,
 })
 
@@ -107,7 +120,7 @@ class FrontPages extends React.Component {
       return (   
         <div className={classes.root}>
           <AppBar className={classes.appBar}>
-            <Toolbar>
+            <Toolbar disableGutters>
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
@@ -116,10 +129,16 @@ class FrontPages extends React.Component {
               >
                 <MenuIcon />
               </IconButton>
+              
+              <NavLink to='/' className={classes.titleRow}>
+                <Typography variant="title" color="inherit" noWrap>
+                  Elijah Liedtke
+                </Typography>
 
-              <Typography variant="title" color="inherit" noWrap>
-                {this.props.title}
-              </Typography>
+                <Typography className={classes.titleCaption} variant="caption" color="inherit" noWrap>
+                  Digital Consultant & Web Developer
+                </Typography>
+              </NavLink>
             </Toolbar>
           </AppBar>
 
@@ -156,6 +175,9 @@ class FrontPages extends React.Component {
             <div className={classes.toolbarTheme} />
             <Switch>
               <Route exact path="/" component={FrontPage} />
+              {/* 
+              <Route exact path="/guides" component={Guides} />
+              */}
               <Route path="/credentials" component={Credentials} />
               <Route exact path="/programs" component={AllPrograms} />
               <Route path="/programs/vigenere-cipher" component={VigenereCipher} />

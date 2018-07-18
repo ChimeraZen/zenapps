@@ -45,7 +45,6 @@ export default class ListView extends Component {
                       const style = {
                         width: 'calc(100% * (1/'+ length +'))'
                       }
-                      console.log(style)
                       return (
                         <p key={item[index]} style={style}>{item[index]}</p>
                       )
