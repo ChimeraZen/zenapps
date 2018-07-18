@@ -2,14 +2,14 @@
   
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.1.4](#v114)  
+**Version**:      [1.2.0](#v120)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
-**Link**:         https://github.com/ChimeraZen/ZenApps.org
+**Link**:         https://github.com/ChimeraZen/ZenApps
 
 **Copyright**:    Copyright (c) 2018, Elijah Liedtke  
 **License**:      http://www.gnu.org/licenses/old-licenses/gpl-2.0.html  
 
-**NPM Packages**:  
+**NPM Packages**:
 * create-react-app
 * react-router-dom
 * firebase
@@ -18,7 +18,35 @@
 * @material-ui/icons
 
 
+## Future Improvements
+* Add option to display source code on programs
+* Add page for non-program examples, such as:
+  * Change logs
+  * Code samples
+* Continue to improve the UI and UX
+* Increase mobile-friendliness
+
+
+---
+
 ## ChangeLog
+### v1.2.0
+* FrontPages component
+  * Set title width to 250px
+  * Added name and position to title
+  * Fullscreen mode
+    * Added icons for enabling/disabling fullscreen on mobile devices
+    * Added handleFullscreen function
+  * Removed body style modification from v1.1.4
+* SideBar component
+  * Removed name
+  * Hid import of GestureIcon until Guides is activated
+  * Removed Typography from @material-ui import
+* README file
+  * Added Future Improvements
+  * Minor visual improvements
+
+
 ### v1.1.4
 * Added "apple-mobile-web-app-capable" meta to index.html
 * Modified body height to calc(100% + 1px) to allow user to hide/show toolbar by scrolling

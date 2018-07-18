@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  height: calc(100% + 1px);
+  height: 100%;
   position: fixed;
 }
 

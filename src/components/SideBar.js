@@ -13,11 +13,10 @@ import {  Avatar,
           ListItem,
           ListItemIcon,
           ListItemText,
-          Typography,
           withStyles } from '@material-ui/core'
 
 import BuildIcon from '@material-ui/icons/Build'
-import GestureIcon from '@material-ui/icons/Gesture'
+//import GestureIcon from '@material-ui/icons/Gesture'
 import SchoolIcon from '@material-ui/icons/School'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import { ExpandLess, ExpandMore } from '@material-ui/icons'
@@ -81,8 +80,8 @@ const styles = theme => ({
 
 class SideBar extends React.Component {
   state = {
+    avatar: "",
     open: false,
-    avatar: ""
   }
   
   handleClick = () => {
@@ -113,10 +112,6 @@ class SideBar extends React.Component {
                   className={classes.avatar} />
               : null
             }
-
-            <Typography variant="display1">
-              {this.props.params.name}
-            </Typography>
           </NavLink>
           
           <List className={classes.quickLinks}>
@@ -165,7 +160,7 @@ class SideBar extends React.Component {
                 <SchoolIcon />
               </ListItemIcon>
               <ListItemText inset>
-                  Credentials
+                Credentials
               </ListItemText>
             </ListItem>
           </NavLink>

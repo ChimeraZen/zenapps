@@ -29,6 +29,8 @@ import {  AppBar,
           withStyles } from '@material-ui/core'
 
 import MenuIcon from '@material-ui/icons/Menu'
+import FullscreenExitIcon from '@material-ui/icons/FullscreenExit'
+import FullscreenIcon from '@material-ui/icons/Fullscreen'
 
 const drawerWidth = 240
 
@@ -59,6 +61,13 @@ const styles = theme => ({
     },
   },
   
+  fullscreen: {
+    marginLeft: 'auto',
+    [theme.breakpoints.up('md')]: {
+      display: 'none'
+    },
+  },
+  
   interface: {
     display: 'flex',
     flexDirection: 'column',
@@ -78,12 +87,10 @@ const styles = theme => ({
     height: '100%',
   },
   
-  titleCaption: {
-    marginLeft: '10px'
-  },
-  
   titleRow: {
     display: 'flex',
+    width: '250px',
+    flexWrap: 'wrap',
     alignItems: 'flex-end',
     textDecoration: 'none',
     color: '#FFF'
@@ -96,6 +103,35 @@ class FrontPages extends React.Component {
 
   handleDrawerToggle = () => {
     this.setState({ mobileOpen: !this.state.mobileOpen })
+  }
+  
+  handleFullscreen = () => {
+    const fullscreen = !this.state.fullscreen
+    const doc = document.getElementById("root")
+    
+    if (fullscreen) {
+      if (doc.requestFullscreen) {
+        doc.requestFullscreen()
+      } else if (doc.mozRequestFullScreen) {
+        doc.mozRequestFullScreen()
+      } else if (doc.webkitRequestFullScreen) {
+        doc.webkitRequestFullScreen()
+      } else if (doc.msRequestFullscreen) {
+        doc.msRequestFullscreen()
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen()
+      } else if (document.mozExitFullScreen) {
+        document.mozExitFullScreen()
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen()
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen()
+      }
+    }
+    
+    this.setState({ fullscreen: fullscreen })
   }
   
   componentDidMount() {
@@ -139,6 +175,18 @@ class FrontPages extends React.Component {
                   Digital Consultant & Web Developer
                 </Typography>
               </NavLink>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                onClick={this.handleFullscreen}
+                className={classes.fullscreen}
+              >
+                {
+                  this.state.fullscreen
+                    ? <FullscreenExitIcon />
+                    : <FullscreenIcon />
+                }
+              </IconButton>
             </Toolbar>
           </AppBar>
 
