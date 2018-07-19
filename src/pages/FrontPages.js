@@ -1,9 +1,9 @@
 // Config
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Switch, Route } from 'react-router-dom'
 import { db } from '../config/firebase/firebase'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Switch, Route } from 'react-router-dom'
+import { withRouter } from 'react-router'
 
 // Components
 import About from '../components/About'
@@ -138,8 +138,14 @@ class FrontPages extends React.Component {
       })
   }
 
+  componentDidUpdate(prevProps) {
+    this.props.location !== prevProps.location &&
+      this.setState({ mobileOpen: false })
+  }
+
   render() {
     const { classes, theme } = this.props
+    
     if (this.state !== null) {
       const drawer = <SideBar params={this.state.sidebar} />
             
@@ -240,4 +246,4 @@ FrontPages.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles, { withTheme: true })(FrontPages)
+export default withRouter(withStyles(styles, { withTheme: true })(FrontPages))

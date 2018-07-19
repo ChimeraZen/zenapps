@@ -30,10 +30,19 @@
 ---
 
 ## ChangeLog
+### v1.3.0
+* Removed theme meta tag from index.html
+* FrontPages component
+  * Added withRouter higher component 
+  * Added componentDidUpdate
+    * Added logic to hide menu on location change
+  
+
 ### v1.2.1
 * FrontPages component
   * Corrected issue with incorrect element used for fullscreen request resulting in menu not showing
   * Cleaned up conditional statements in handleFullscreen()
+  
 
 ### v1.2.0
 * FrontPages component
