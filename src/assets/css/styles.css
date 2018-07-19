@@ -7,6 +7,22 @@ body {
   position: fixed;
 }
 
+body:-moz-full-screen {
+  background-color: white;
+}
+
+body:-webkit-full-screen {
+  background-color: white;
+}
+
+body:fullscreen {
+  background-color: white;
+}
+
+body:-ms-fullscreen {
+  background-color: white;
+}
+
 #root {
   display: flex;
   align-items: center;

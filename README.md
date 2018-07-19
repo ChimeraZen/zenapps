@@ -2,7 +2,7 @@
   
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.2.1](#v121)  
+**Version**:      [1.3.1](#v131)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps
 
@@ -30,6 +30,10 @@
 ---
 
 ## ChangeLog
+### v1.3.1
+* Updated styles to set background to white when fullscreen
+
+
 ### v1.3.0
 * Removed theme meta tag from index.html
 * FrontPages component
