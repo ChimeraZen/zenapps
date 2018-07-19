@@ -25,7 +25,6 @@ const styles = theme => ({
     justifyContent: 'center',
     flexWrap: 'wrap',
     padding: '15px',
-    background: 'inherit',
   },
   
   position: {

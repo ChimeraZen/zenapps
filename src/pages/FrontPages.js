@@ -72,6 +72,7 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
+    background: 'white'
   },
   
   progress: {
