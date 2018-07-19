@@ -107,28 +107,18 @@ class FrontPages extends React.Component {
   
   handleFullscreen = () => {
     const fullscreen = !this.state.fullscreen
-    const doc = document.getElementById("root")
+    const doc = document.body
     
     if (fullscreen) {
-      if (doc.requestFullscreen) {
-        doc.requestFullscreen()
-      } else if (doc.mozRequestFullScreen) {
-        doc.mozRequestFullScreen()
-      } else if (doc.webkitRequestFullScreen) {
-        doc.webkitRequestFullScreen()
-      } else if (doc.msRequestFullscreen) {
-        doc.msRequestFullscreen()
-      }
+      doc.requestFullscreen && doc.requestFullscreen()
+      doc.mozRequestFullScreen && doc.mozRequestFullScreen()
+      doc.webkitRequestFullScreen && doc.webkitRequestFullScreen()
+      doc.msRequestFullscreen && doc.msRequestFullscreen()
     } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen()
-      } else if (document.mozExitFullScreen) {
-        document.mozExitFullScreen()
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen()
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen()
-      }
+      document.exitFullscreen && document.exitFullscreen()
+      document.mozExitFullScreen && document.mozExitFullScreen()
+      document.webkitExitFullscreen && document.webkitExitFullscreen()
+      document.msExitFullscreen && document.msExitFullscreen()
     }
     
     this.setState({ fullscreen: fullscreen })

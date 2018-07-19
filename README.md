@@ -2,7 +2,7 @@
   
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.2.0](#v120)  
+**Version**:      [1.2.1](#v121)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps
 
@@ -30,6 +30,11 @@
 ---
 
 ## ChangeLog
+### v1.2.1
+* FrontPages component
+  * Corrected issue with incorrect element used for fullscreen request resulting in menu not showing
+  * Cleaned up conditional statements in handleFullscreen()
+
 ### v1.2.0
 * FrontPages component
   * Set title width to 250px
