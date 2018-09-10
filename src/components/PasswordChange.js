@@ -1,36 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import { auth } from '../config/firebase';
+import { auth } from '../config/firebase/firebase'
 
 const byPropKey = (propertyName, value) => () => ({
   [propertyName]: value,
-});
+})
 
 const INITIAL_STATE = {
   passwordOne: '',
   passwordTwo: '',
   error: null,
-};
+}
 
 class PasswordChangeForm extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.state = { ...INITIAL_STATE };
+    this.state = { ...INITIAL_STATE }
   }
 
   onSubmit = (event) => {
-    const { passwordOne } = this.state;
+    const { passwordOne } = this.state
 
     auth.doPasswordUpdate(passwordOne)
       .then(() => {
-        this.setState(() => ({ ...INITIAL_STATE }));
+        this.setState({ ...INITIAL_STATE })
       })
       .catch(error => {
-        this.setState(byPropKey('error', error));
-      });
+        this.setState(byPropKey('error', error))
+      })
 
-    event.preventDefault();
+    event.preventDefault()
   }
 
   render() {
@@ -38,11 +38,11 @@ class PasswordChangeForm extends Component {
       passwordOne,
       passwordTwo,
       error,
-    } = this.state;
+    } = this.state
 
     const isInvalid =
       passwordOne !== passwordTwo ||
-      passwordOne === '';
+      passwordOne === ''
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -64,7 +64,7 @@ class PasswordChangeForm extends Component {
 
         { error && <p>{error.message}</p> }
       </form>
-    );
+    )
   }
 }
 

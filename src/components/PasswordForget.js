@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-import { auth } from '../config/firebase';
+import { auth } from '../config/firebase/firebase'
 
 const PasswordForgetPage = () =>
   <div>
@@ -11,41 +11,41 @@ const PasswordForgetPage = () =>
 
 const byPropKey = (propertyName, value) => () => ({
   [propertyName]: value,
-});
+})
 
 const INITIAL_STATE = {
   email: '',
   error: null,
-};
+}
 
 class PasswordForgetForm extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.state = { ...INITIAL_STATE };
+    this.state = { ...INITIAL_STATE }
   }
 
   onSubmit = (event) => {
-    const { email } = this.state;
+    const { email } = this.state
 
     auth.doPasswordReset(email)
       .then(() => {
-        this.setState(() => ({ ...INITIAL_STATE }));
+        this.setState({ ...INITIAL_STATE })
       })
       .catch(error => {
-        this.setState(byPropKey('error', error));
-      });
+        this.setState(byPropKey('error', error))
+      })
 
-    event.preventDefault();
+    event.preventDefault()
   }
 
   render() {
     const {
       email,
       error,
-    } = this.state;
+    } = this.state
 
-    const isInvalid = email === '';
+    const isInvalid = email === ''
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -61,7 +61,7 @@ class PasswordForgetForm extends Component {
 
         { error && <p>{error.message}</p> }
       </form>
-    );
+    )
   }
 }
 
@@ -70,7 +70,7 @@ const PasswordForgetLink = () =>
     <Link to="/pw-forget">Forgot Password?</Link>
   </p>
 
-export default PasswordForgetPage;
+export default PasswordForgetPage
 
 export {
   PasswordForgetForm,

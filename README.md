@@ -2,7 +2,7 @@
   
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.3.2](#v132)  
+**Version**:      [1.3.3](#v133)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps
 
@@ -30,6 +30,23 @@
 ---
 
 ## ChangeLog
+### v1.3.3
+* App.js
+  * Modified withAuthentication into a higher-order component
+  * Included switch from react-router-dom
+  * Created routing for admin
+  
+* Admin.js
+  * Added withAuthentication's AuthUser Context to ensure admin route cannot be followed without being authorized
+  * Created sign-in component
+
+* AdminDashboard.js
+  * Created route for AllMenus component
+  
+* API
+  * Created components/admin/api.js
+  * Added functions for retrieving and saving information from Firebase
+
 ### v1.3.2
 * Corrected issue with background showing black when on fullscreen
 

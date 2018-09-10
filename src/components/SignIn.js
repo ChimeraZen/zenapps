@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { SignUpLink } from './SignUp'
-import { PasswordForgetLink } from './PasswordForget';
-import { auth } from '../config/firebase/firebase'
+import { PasswordForgetLink } from './PasswordForget'
+import { auth } from '../config/firebase'
 import * as routes from '../constants/routes'
 
 const SignInPage = ({ history }) =>
@@ -11,7 +10,6 @@ const SignInPage = ({ history }) =>
     <h1>SignIn</h1>
     <SignInForm history={history} />
     <PasswordForgetLink />
-    <SignUpLink />
   </div>
 
 const byPropKey = (propertyName, value) => () => ({
@@ -40,11 +38,11 @@ class SignInForm extends Component {
     const {
       history,
     } = this.props
-
+    
     auth.doSignInWithEmailAndPassword(email, password)
       .then(() => {
-        this.setState(() => ({ ...INITIAL_STATE }))
-        history.push(routes.PUBLIC_LANDING)
+        this.setState({ ...INITIAL_STATE })
+        history.push(routes.admin_landing)
       })
       .catch(error => {
         this.setState(byPropKey('error', error))

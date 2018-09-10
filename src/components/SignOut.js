@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { auth } from '../config/firebase'
+import { auth } from '../config/firebase/'
 
 const SignOutButton = () =>
   <button

@@ -1,10 +1,10 @@
 //Config
 import React from 'react'
-import AuthUserContext from '../components/contexts/AuthUserContext'
+import AuthUserContext from '../components/contexts/AuthUser'
 import { firebase } from './firebase'
 
-
-export default class WithAuthentication extends React.Component {
+const withAuthentication = (Component) =>
+  class WithAuthentication extends React.Component {
     state = {
       authUser: null,
     }
@@ -22,8 +22,11 @@ export default class WithAuthentication extends React.Component {
 
       return (
         <AuthUserContext.Provider value={authUser}>
-          {this.props.children}
+          <Component />
         </AuthUserContext.Provider>
       )
     }
   }
+  
+export default withAuthentication
+
