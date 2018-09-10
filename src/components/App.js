@@ -1,16 +1,16 @@
 // Config
 import React from 'react'
-import WithAuthentication from '../config/WithAuthentication'
 import * as routes from '../constants/routes'
+import withAuthentication from '../config/withAuthentication'
 import {
   BrowserRouter as Router,
-  Route 
+  Route, 
+  Switch
 } from 'react-router-dom'
-
 
 // Styles
 import CssBaseline from '@material-ui/core/CssBaseline'
-import '../assets/css/styles.css'
+import './assets/css/styles.css'
 import { 
   MuiThemeProvider, 
   createMuiTheme, 
@@ -22,8 +22,12 @@ import {
 } from '@material-ui/core/colors'
 
 
+// Components
+
+
 // Pages
 import FrontPages from '../pages/FrontPages'
+import Admin from './Admin'
 
 const breakpointValues = {
   xs: 0,
@@ -64,15 +68,16 @@ const theme = createMuiTheme({
 })
 
 const App = () =>
-  <WithAuthentication>
-    <Router>
-      <MuiThemeProvider theme={theme}>
-        <React.Fragment>
-          <CssBaseline />
-          <Route path={routes.PUBLIC_LANDING} component={() => <FrontPages />} />
-        </React.Fragment>
-      </MuiThemeProvider>
+  <Router>
+    <MuiThemeProvider theme={theme}>
+      <React.Fragment>
+        <CssBaseline />
+        <Switch>
+          <Route path={routes.admin_landing} component={Admin} />
+          <Route exact path={routes.public_landing} component={FrontPages} />
+        </Switch>
+      </React.Fragment>
+    </MuiThemeProvider>
   </Router>
-</WithAuthentication>
 
-export default App
+export default withAuthentication(App)

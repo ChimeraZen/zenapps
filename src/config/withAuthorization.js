@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 
-import AuthUserContext from './contexts/AuthUserContext'
+import AuthUserContext from './contexts/AuthUser'
 import { firebase } from '../config/firebase'
 import * as routes from '../constants/routes'
 
