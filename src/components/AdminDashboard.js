@@ -7,7 +7,7 @@ import { NavLink,
         Route 
 } from 'react-router-dom'
 import { withRouter } from 'react-router'
-import * as api from './admin/api'
+import { privateAPI } from '../api'
 
 // Components
 import AllMenus from './admin/AllMenus'
@@ -122,7 +122,7 @@ class AdminDashboard extends React.Component {
   }
   
   componentDidMount() {
-    api.getAdminMenu().then(menus => {
+    privateAPI.getAdminMenu().then(menus => {
       this.setState({
         mobileOpen: false,
         menus

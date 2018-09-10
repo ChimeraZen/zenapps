@@ -30,6 +30,14 @@
 ---
 
 ## ChangeLog
+### v1.3.4
+* API
+  * Updated components that used previous version and source of API
+  * Separated APIs into public and private
+  * Moved into src/api/
+  * Added private to .gitignore
+
+
 ### v1.3.3
 * App.js
   * Modified withAuthentication into a higher-order component
@@ -46,6 +54,7 @@
 * API
   * Created components/admin/api.js
   * Added functions for retrieving and saving information from Firebase
+
 
 ### v1.3.2
 * Corrected issue with background showing black when on fullscreen
