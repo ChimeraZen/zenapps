@@ -2,7 +2,7 @@
   
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.3.5](#v135)  
+**Version**:      [1.3.6](#v136)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps
 
@@ -30,6 +30,10 @@
 ---
 
 ## ChangeLog
+### v1.3.6
+* Minor changes
+
+
 ### v1.3.5
 * DragList
   * Created a draggable/reorderable list component 

@@ -140,6 +140,7 @@ class FrontPages extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    // Closes menu on mobile when a link is clicked and/or URL changes
     this.props.location !== prevProps.location &&
       this.setState({ mobileOpen: false })
   }
@@ -219,7 +220,7 @@ class FrontPages extends React.Component {
           <div className={classes.interface}>
             <div className={classes.toolbarTheme} />
             <Switch>
-              <Route exact path="/" component={FrontPage} />
+              <Route path="/" component={FrontPage} />
               {/* 
               <Route exact path="/guides" component={Guides} />
               */}
