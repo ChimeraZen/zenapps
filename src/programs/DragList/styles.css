@@ -1,0 +1,63 @@
+.draggableList .appBar {
+  display: inline-block;
+  padding: 7px 8px;
+  background: #eee;
+}
+
+.draggableList .newButton,
+.draggableList .saveButton,
+.draggableList .deleteButton {
+  margin-right: 8px;
+}
+
+.draggableList ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 10px 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.draggableList ul .listHeader {
+  text-transform: capitalize;
+  cursor: default;
+}
+
+.draggableList ul li {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  background: #FFF;
+  cursor: pointer;
+  list-style-type: none !important;
+  border: 1px solid transparent;
+}
+
+.draggableList ul li:not(.listHeader):hover{
+  border: 1px solid #eee;
+}
+
+.draggableList ul li input {
+  background: transparent;
+}
+
+.draggableList ul li input:focus{
+  border: none;
+  outline: none;
+}
+
+.draggableList .listColumn {
+  display: inline-flex;
+  align-items: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.draggableList .listColumn:last-child {
+  margin-right: 0;
+}
+
+.draggableList .placeholder {
+  border: 1px dashed black;
+}
