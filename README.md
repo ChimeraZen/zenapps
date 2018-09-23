@@ -2,7 +2,7 @@
   
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.3.6](#v136)  
+**Version**:      [1.4.0](#v140)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps
 
@@ -30,6 +30,12 @@
 ---
 
 ## ChangeLog
+### v1.4.0
+* Added administrative interface
+* Updated routing
+* Added more functions to API
+* Minor updates
+
 ### v1.3.6
 * Minor changes
 

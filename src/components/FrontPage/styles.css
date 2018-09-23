@@ -1,0 +1,21 @@
+.front-page {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  color: #FFF;
+  font-family: 'Encode Sans Condensed', sans-serif;
+  background-color: #2a5475 !important;
+  overflow: auto;
+}
+
+.front-page .column {
+  height: stretch;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.front-page .column-3 {
+  width: 100%;
+  height: stretch;
+}

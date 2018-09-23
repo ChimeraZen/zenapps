@@ -56,7 +56,7 @@ class Credentials extends React.Component {
     
     return (
       this.state !== null &&
-        <Paper className={classes.content} elevation={0}>
+        <Paper className={classes.content} elevation={0} square={true}>
           {this.state.page.items.map((item, index) => 
             <Card key={"item" + index} className={classes.card} elevation={1}>
               <CardContent className={classes.cardContent}>

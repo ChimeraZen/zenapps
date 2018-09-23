@@ -74,7 +74,7 @@ const App = () =>
         <CssBaseline />
         <Switch>
           <Route path={routes.admin_landing} component={Admin} />
-          <Route exact path={routes.public_landing} component={FrontPages} />
+          <Route path={routes.public_landing} component={FrontPages} />
         </Switch>
       </React.Fragment>
     </MuiThemeProvider>

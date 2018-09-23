@@ -94,14 +94,10 @@ export default class VigenereCipher extends Component {
       // Current character in the plaintext
       const currentStringChar = this.state.cipher.string.value.substring(i + 1, i)
       
-      
       // The index of currentStringChar in the current keyed alphabet
       const encryptedCharIndex = this.state.options.isDecrypt 
         ? /* Decryption */ keyedAlphabets[currentKeyCharIndex].toString().indexOf(currentStringChar) 
         : /* Encryption */ this.state.cipher.alphabet.value.indexOf(currentStringChar)
-      
-      // Encryption works fine. Breaks on Decryption
-
       // Add the new character to the final results and increase currentKeyCharIndex
       const stringToUse = this.state.options.isDecrypt 
         ? this.state.cipher.alphabet.value 

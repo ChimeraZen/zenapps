@@ -13,7 +13,8 @@ import SideBar from '../components/SideBar'
 
 // Programs
 import AllPrograms from '../components/AllPrograms'
-import FrontPage from '../components/FrontPage'
+//import FrontPage from '../components/FrontPage'
+import FrontPage from '../components/FrontPage/'
 import VigenereCipher from '../programs/VigenereCipher'
 import GridListView from '../programs/GridListView'
 import DataTree from '../programs/DataTree'
@@ -220,11 +221,11 @@ class FrontPages extends React.Component {
           <div className={classes.interface}>
             <div className={classes.toolbarTheme} />
             <Switch>
-              <Route path="/" component={FrontPage} />
+              <Route exact path="/" component={FrontPage} />
               {/* 
               <Route exact path="/guides" component={Guides} />
               */}
-              <Route path="/credentials" component={Credentials} />
+              <Route exact path="/credentials" component={Credentials} />
               <Route exact path="/programs" component={AllPrograms} />
               <Route path="/programs/vigenere-cipher" component={VigenereCipher} />
               <Route path="/programs/grid-list-view" component={GridListView} />

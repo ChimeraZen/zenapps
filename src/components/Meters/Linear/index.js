@@ -1,6 +1,4 @@
 import React from 'react'
-
-// Styles
 import './styles.css'
 
 export default class LinearMeter extends React.Component {

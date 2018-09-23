@@ -1,7 +1,6 @@
 // Config
 import React from 'react'
 import PropTypes from 'prop-types'
-//import { db } from '../config/firebase/firebase'
 import { NavLink, 
         Switch, 
         Route 
@@ -11,6 +10,7 @@ import { privateAPI } from '../api'
 
 // Components
 import AllMenus from './admin/AllMenus'
+import { Pages } from './admin/Pages'
 import SignOutButton from './SignOut'
 import SideBar2 from '../components/SideBar2'
 
@@ -208,6 +208,7 @@ class AdminDashboard extends React.Component {
             <div className={classes.toolbarTheme} />
             <Switch>
               <Route path="/admin/menus" component={AllMenus} />
+              <Route path="/admin/pages" component={Pages} />
               {/* 
               <Route exact path="/guides" component={Guides} />
               <Route path="/credentials" component={Credentials} />
