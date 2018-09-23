@@ -43,7 +43,7 @@ export default class DragList extends React.Component {
     this.dragged.removeAttribute("style")
     target.parentNode.removeChild(placeholder)
     
-    // Redorder items
+    // Reorder items
     data.splice(to, 0, data.splice(from, 1)[0])
     
     // Apply new indexes to children

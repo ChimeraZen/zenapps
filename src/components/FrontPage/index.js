@@ -5,7 +5,7 @@ import { db, storage } from '../../config/firebase/firebase'
 
 // Components
 import Credentials from '../Credentials'
-import DetailsCard from '../DetailsCard/'
+import Card from '../Card/'
 import { LinearMeter } from '../Meters/'
 
 // Styles
@@ -17,19 +17,19 @@ export default class FrontPage extends React.Component {
     return (
       <Paper className="front-page" elevation={0} square={true}>
         <div className="column">
-          <DetailsCard title="Skills">
+          <Card title="Skills">
             <LinearMeter title="Scripting/Web Design" percent="95" />
             <LinearMeter title="Object-Oriented Programming" percent="90" />
             <LinearMeter title="React Component Development" percent="70" />
-          </DetailsCard>
-          <DetailsCard title="Languages">
+          </Card>
+          <Card title="Languages">
             <LinearMeter title="HTML5" percent="100" />
             <LinearMeter title="CSS3" percent="98" />
             <LinearMeter title="JavaScript" percent="98" />
             <LinearMeter title="PHP" percent="95" />
             <LinearMeter title="MySQL" percent="90" />
             <LinearMeter title="ReactJS" percent="75" />
-          </DetailsCard>
+          </Card>
         </div>
         <div className="column-3">
           <Credentials />
