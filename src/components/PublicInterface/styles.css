@@ -1,0 +1,40 @@
+.public-interface {
+  
+}
+  
+.public-interface .public-interface-appBar {
+}
+
+.public-interface .fullscreen {
+  margin-left: auto;
+}
+
+.public-interface .interface {
+  display: inline-block;
+  width: calc(100% - 240px);
+  height: stretch;
+  max-height: calc(100% - 68px);
+  overflow: auto;
+}
+
+.public-interface .progress {
+  width: 100%;
+  margin: 0 auto
+}
+
+.public-interface .circular-progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.public-interface .titleRow {
+  display: flex;
+  width: 250px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  text-decoration: none;
+  color: #FFF;
+}

@@ -7,7 +7,7 @@ import {
   DragListTableHeader,
   DragListTableRow,
   DragListTableColumn
-} from '../../../programs/DragListTable'
+} from '../../DragListTable'
 
 class AllPages extends React.Component {
   componentDidMount() {

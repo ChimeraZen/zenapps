@@ -1,6 +1,7 @@
 // Config
 import React from 'react'
 import * as routes from '../constants/routes'
+import AuthUserContext from '../config/AuthUserContext'
 import withAuthentication from '../config/withAuthentication'
 import {
   BrowserRouter as Router,
@@ -8,9 +9,10 @@ import {
   Switch
 } from 'react-router-dom'
 
+
 // Styles
 import CssBaseline from '@material-ui/core/CssBaseline'
-import './assets/css/styles.css'
+import './styles.css'
 import { 
   MuiThemeProvider, 
   createMuiTheme, 
@@ -22,12 +24,24 @@ import {
 } from '@material-ui/core/colors'
 
 
+
 // Components
+import AdminDashboard from '../components/admin/Dashboard/AdminDashboard'
+import PublicInterface from './PublicInterface/'
+import SignInForm from './admin/SignIn'
+
+
+// Programs
+import DataTree from './DataTree'
+import GridListView from './GridListView'
+import VigenereCipher from './VigenereCipher'
 
 
 // Pages
-import FrontPages from '../pages/FrontPages'
-import Admin from './Admin'
+import About from '../pages/About/'
+import AllPrograms from '../pages/Programs/'
+import Credentials from '../pages/Credentials/'
+import FrontPage from '../pages/FrontPage/'
 
 const breakpointValues = {
   xs: 0,
@@ -59,12 +73,6 @@ const theme = createMuiTheme({
     values: breakpointValues 
   },
   palette: palette,
-  typography: {
-    "fontFamily": "'Encode Sans Condensed', sans-serif",
-    subheading: {
-      "fontFamily": "'Roboto', sans-serif",
-    }
-  }
 })
 
 const App = () =>
@@ -73,8 +81,27 @@ const App = () =>
       <React.Fragment>
         <CssBaseline />
         <Switch>
-          <Route path={routes.admin_landing} component={Admin} />
-          <Route path={routes.public_landing} component={FrontPages} />
+          <Route path={routes.admin_landing} component={() => 
+            <AuthUserContext.Consumer>
+              {authUser => authUser && authUser !== null
+                ? <AdminDashboard />
+                : <SignInForm />
+              }
+            </AuthUserContext.Consumer>
+          } />
+          <Route path={routes.public_landing} component={() => 
+            <PublicInterface>
+              <Switch>
+                <Route exact path="/" component={FrontPage} />
+                <Route exact path="/credentials" component={Credentials} />
+                <Route exact path="/programs" component={AllPrograms} />
+                <Route path="/programs/vigenere-cipher" component={VigenereCipher} />
+                <Route path="/programs/grid-list-view" component={GridListView} />
+                <Route path="/programs/data-tree" component={DataTree} />
+                <Route path="/about" component={About} />
+              </Switch>
+            </PublicInterface>
+          } />
         </Switch>
       </React.Fragment>
     </MuiThemeProvider>

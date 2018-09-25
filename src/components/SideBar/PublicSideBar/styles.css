@@ -1,0 +1,49 @@
+.public-sidebar {
+  display: inline-block;
+  height: stretch;
+  width: 240px;
+  vertical-align: top;
+  border-right: 1px solid lightgrey;
+}
+
+.public-sidebar .public-sidebar-avatar {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+}
+
+.public-sidebar .public-sidebar-quickLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  width: 100%;
+}
+
+.public-sidebar .public-sidebar-listItem {
+  justify-content: center;
+  padding: 0;
+}
+
+.public-sidebar .public-sidebar-menu {
+  width: 100%;
+  max-width: 360px;
+  background-color: theme.palette.background.paper
+}
+
+.public-sidebar .public-sidebar-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.public-sidebar .public-sidebar-nested {
+  padding-left: 35px;
+}
+
+.public-sidebar .public-sidebar-progress {
+  display: block;
+  margin: auto;
+}
