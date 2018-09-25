@@ -60,5 +60,5 @@ typings/
 # next.js build output
 .next
 
-src/config/
+src/config/firebase/firebase.js
 src/api/private.js
