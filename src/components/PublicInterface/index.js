@@ -1,10 +1,7 @@
 // Config
 import React from 'react'
-import PropTypes from 'prop-types'
 import { db } from '../../config/firebase/firebase'
-import { NavLink, Switch, Route } from 'react-router-dom'
-import { withRouter } from 'react-router'
-import classnames from 'classnames'
+import { NavLink } from 'react-router-dom'
 
 // Components
 import { PublicSideBar } from '../SideBar/'
@@ -13,21 +10,16 @@ import { PublicSideBar } from '../SideBar/'
 import './styles.css'
 import {  AppBar,
           CircularProgress,
-          Drawer,
-          Hidden,
           IconButton,
           Toolbar,
-          Typography,
-          withStyles } from '@material-ui/core'
+          Typography } from '@material-ui/core'
 
 import MenuIcon from '@material-ui/icons/Menu'
-import FullscreenExitIcon from '@material-ui/icons/FullscreenExit'
-import FullscreenIcon from '@material-ui/icons/Fullscreen'
 
 class PublicInterface extends React.Component {
 
   handleDrawerToggle = () => {
-    this.setState({ mobileOpen: !this.state.mobileOpen })
+    this.setState({ drawerOpen: !this.state.drawerOpen })
   }
   
   componentDidMount() {
@@ -38,7 +30,7 @@ class PublicInterface extends React.Component {
         const sidebar = snap.data()
 
         this.setState({
-          mobileOpen: false,
+          drawerOpen: true,
           sidebar
         })
       })
@@ -73,14 +65,14 @@ class PublicInterface extends React.Component {
                   Elijah Liedtke
                 </Typography>
 
-                <Typography className="titleCaption" className="light-text" variant="caption" noWrap>
+                <Typography className="titleCaption light-text" variant="caption" noWrap>
                   Digital Consultant & Web Developer
                 </Typography>
               </NavLink>
             </Toolbar>
           </AppBar>
           <div className="public-interface">
-            <PublicSideBar params={this.state.sidebar} />
+            <PublicSideBar params={this.state.sidebar} isOpen={this.state.drawerOpen} />
             <div className="interface">
               {this.props.children}
             </div>
@@ -89,4 +81,4 @@ class PublicInterface extends React.Component {
   }
 }
 
-export default withRouter(PublicInterface)
+export default PublicInterface

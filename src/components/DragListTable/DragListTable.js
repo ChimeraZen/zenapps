@@ -67,6 +67,7 @@ export default class DragListTable extends React.Component {
       )
       
       this.setState({ 
+        items: items,
         order: data,
       })
     } else {

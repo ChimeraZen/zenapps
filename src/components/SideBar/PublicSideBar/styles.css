@@ -4,6 +4,7 @@
   width: 240px;
   vertical-align: top;
   border-right: 1px solid lightgrey;
+  transition: all .3s ease-in-out;
 }
 
 .public-sidebar .public-sidebar-avatar {

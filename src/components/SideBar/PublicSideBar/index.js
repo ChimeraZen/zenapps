@@ -42,8 +42,9 @@ class PublicSideBar extends React.Component {
   }
   
   render() {
+    const styles = this.props.isOpen ? {marginLeft: "-241px"} : {marginLeft: "0"}
     return (
-      <div className="public-sidebar">
+      <div className="public-sidebar" style={styles}>
         <NavLink to='/'>
           <Avatar 
             alt={this.props.params.name} 

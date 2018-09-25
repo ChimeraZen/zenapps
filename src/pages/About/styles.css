@@ -1,5 +1,8 @@
 .about-page {
-  height: stretch;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  flex-wrap: wrap;
 }
 
 .container {

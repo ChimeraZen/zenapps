@@ -1,6 +1,5 @@
 // Config
 import React from 'react'
-import PropTypes from 'prop-types'
 import { db } from '../../config/firebase/firebase'
 import { NavLink } from 'react-router-dom'
 

@@ -1,6 +1,5 @@
 // Config
 import React from 'react'
-import PropTypes from 'prop-types'
 import { db } from '../../config/firebase/firebase'
 
 // Styles
@@ -8,7 +7,7 @@ import './styles.css'
 import {  Paper,
           Typography } from '@material-ui/core'
 
-export class About extends React.Component {
+class About extends React.Component {
   componentDidMount() {
     db.collection("pages")
       .doc("about")
@@ -23,7 +22,7 @@ export class About extends React.Component {
   
   render() {
     return this.state !== null &&
-      <Paper className="about-page" elevation={0}>
+      <Paper className="about-page" elevation={0} square={true}>
         {this.state.page.map((item, i) => 
           <div key={"item" + i} className="container">
             <Typography className="title" variant="title" component="h2">

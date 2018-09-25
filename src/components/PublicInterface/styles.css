@@ -1,5 +1,6 @@
 .public-interface {
-  
+  display: flex;
+  flex-wrap: nowrap;
 }
   
 .public-interface .public-interface-appBar {
@@ -10,10 +11,9 @@
 }
 
 .public-interface .interface {
-  display: inline-block;
-  width: calc(100% - 240px);
+  flex: 4;
   height: stretch;
-  max-height: calc(100% - 68px);
+  max-height: calc(100% - 64px);
   overflow: auto;
 }
 
