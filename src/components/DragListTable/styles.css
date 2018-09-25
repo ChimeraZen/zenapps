@@ -1,0 +1,17 @@
+.dragListTable {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.dragListTable .listHeader {
+  text-transform: capitalize;
+}
+
+.dragListTable .listRow {
+  display: flex;
+}
+
+.dragListTable .listColumn {
+  flex: 1;
+}

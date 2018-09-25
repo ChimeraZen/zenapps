@@ -1,0 +1,12 @@
+.zenstepper {
+  position: relative;
+  height: 100%;
+}
+
+.zenstepper .swipeable-views {
+    width: 100%;
+    height: calc(100% - 173px);
+}
+
+.zenstepper .zenstepper-nav {
+}

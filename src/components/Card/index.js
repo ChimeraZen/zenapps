@@ -3,8 +3,9 @@ import './styles.css'
 
 export default class Card extends React.Component {
   render() {
+    const classnames = this.props.className ? this.props.className + " zen-card" : "zen-card"
     return (
-      <div className="zen-card">
+      <div className={classnames}>
         {this.props.title &&
           <div className="header">
             <h3>{this.props.title}</h3>

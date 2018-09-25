@@ -1,7 +1,7 @@
 .linear-meter {
   display: inline-block;
-  width: 200px;
-  padding: 10px 10px 10px 5px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .linear-meter .linear-meter-header {
