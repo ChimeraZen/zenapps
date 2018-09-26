@@ -24,7 +24,7 @@ class About extends React.Component {
     return this.state !== null &&
       <Paper className="about-page" elevation={0} square={true}>
         {this.state.page.map((item, i) => 
-          <div key={"item" + i} className="container">
+          <div key={"item" + i} className="small-column">
             <Typography className="title" variant="title" component="h2">
               {item.title}
             </Typography>

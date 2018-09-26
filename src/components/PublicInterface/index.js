@@ -39,7 +39,7 @@ class PublicInterface extends React.Component {
   componentDidUpdate(prevProps) {
     // Closes menu on mobile when a link is clicked and/or URL changes
     this.props.location !== prevProps.location &&
-      this.setState({ mobileOpen: false })
+      this.setState({ drawerOpen: false })
   }
 
   render() {

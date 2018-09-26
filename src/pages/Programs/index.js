@@ -66,13 +66,13 @@ export class AllPrograms extends React.Component {
         </div>
         <div className="small-column">
           <Typography className="title light-text" variant="title" component="h2">
-            Work Experience
+            My Programs
           </Typography>
           <Typography paragraph component="p" className="light-text">
-            In my time as a Web Developer and Digital Consultant, I've had the pleasure of working with people of all ages and helping to guide them as they learn more about the marvel that is the internet and the advancement of technology in our day-to-day lives.
+            Over the years, I've written many different scripts in many different languages. Whether I'm using PHP to query a MySQL database, jQuery/JavaScript to work with the DOM, or React to create a reusable component, I have a desire to follow a standard operating procedure.
           </Typography>
           <Typography paragraph component="p" className="light-text">
-            With my skills gained from a Law & Security Administration program, planning/teaching from a Radiation Safety Officer course, and life in general, I have many additional skills to offer because I believe that you never know when what you know will come in handy!
+            Since starting to learn React, I have developed my skills to the point where I've built a user-authorized administrative dashboard, and front-end website. Through a secure connection to Google Firebase, I have been able to build an object-based database and, with a custom API, organize and return the database information in a usable format.
           </Typography>
         </div>
         <div className="small-column">

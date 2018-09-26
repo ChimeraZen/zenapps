@@ -2,7 +2,7 @@
   
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.5.3](#v153)  
+**Version**:      [1.5.4](#v154)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps
 
@@ -30,6 +30,12 @@
 ---
 
 ## ChangeLog
+### v1.5.4
+* Minor updates to styles
+* Adjustment to text in Programs
+* Added Contact component-page to FrontPage
+
+
 ### v1.5.3
 * Corrected errors with unnecessary imports
 * Corrected missing connection for sidebar to slide off screen
