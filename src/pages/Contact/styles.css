@@ -1,0 +1,44 @@
+.contact-page {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  background-color: #2a5475 !important;
+}
+
+.contact-page .image {
+  display: block;
+  min-width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.contact-page .card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 300px;
+  min-width: 300px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+.contact-page .card:last-child {
+  margin-bottom: 0;
+}
+
+.contact-page .position {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-page .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-page .title {
+  padding-left: 5px;
+  margin-bottom: 3px;
+  border-left: 3px solid #4caf50;
+}
