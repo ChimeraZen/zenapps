@@ -37,6 +37,10 @@ ul, h3 {
   height: stretch;
 }
 
+.flex {
+  display: flex;
+}
+
 .circular-progress {
   display: flex;
   justify-content: center;

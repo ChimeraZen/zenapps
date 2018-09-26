@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom'
 // Styles
 import './styles.css'
 import {  Paper,
+          Icon,
           List,
           ListItem,
           ListItemIcon,
@@ -67,6 +68,12 @@ class Contact extends React.Component {
             <ListItem button component="a" href="tel:+16135852433">
               <PhoneIcon />
               <ListItemText primary="+1 (613) 585-2433" />
+            </ListItem>
+            <ListItem button component="a" href="https://www.linkedin.com/in/elijah-liedtke/">
+              <Icon className="flex">
+                <i className="fab fa-linkedin"></i>
+              </Icon>
+              <ListItemText primary="Elijah Liedtke" />
             </ListItem>
           </List>
         </div>
