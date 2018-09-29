@@ -1,0 +1,79 @@
+
+.grid-list-view {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+}
+
+.grid-list-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.grid-list-header h3 {
+  margin-right: 10px;
+}
+
+.grid-list-options {
+  margin-left: auto;
+  min-width: 64px;
+}
+
+.grid-list-options i {
+  display: inline-flex;
+  margin-left: 10px;
+  padding: 1px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.1s ease-out;
+}
+
+.grid-list-options i.active {
+  border-bottom: 1px solid deepskyblue;
+}
+
+.grid-list-view ul {
+  display: flex;
+  flex-wrap: wrap;
+  transition: all .3s ease-in;
+}
+
+.grid-list-view .list .grid-list-item {
+  flex-basis: 100%;
+}
+
+.grid-list-view .grid .grid-list-item {
+  flex-basis: 33.333333333%;
+}
+
+.grid-list-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 75px;
+  padding: 10px;
+  list-style-type: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: flex-basis .4s ease-in-out;
+}
+
+.grid-list-item:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.grid-list-item::before {
+  content: '';
+  /** position absolute starting at the top and left of our column **/
+  position: absolute;
+  top: 0;
+  left: 0;
+  /** pseudo-elements are inline by default **/
+  display: block;
+  /** same height and width than our column **/
+  width: 100%;
+  height: 100%;
+  /** we want the pseudo-element to be behind our real column **/
+  z-index: -1;
+}
