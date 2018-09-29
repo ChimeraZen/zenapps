@@ -1,0 +1,22 @@
+.simple-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid darkgrey;
+  background: #FFF;
+}
+
+.simple-list-item {
+  padding: 10px 20px;
+  list-style-type: none;
+  transition: background .1s ease-in;
+}
+
+.simple-list-item:hover {
+  background: rgba(0, 0, 0, 0.125);
+  transition: background .2s ease-out;
+}
+
+.simple-list-title {
+  padding: 10px;
+  border-bottom: 1px solid darkgrey;
+}
