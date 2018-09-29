@@ -33,15 +33,15 @@ import SignInForm from './admin/SignIn'
 
 // Programs
 import DataTree from './DataTree'
-import GridListView from './GridListView'
+import { GridListView } from './GridListView'
 import VigenereCipher from './VigenereCipher'
 
 
 // Pages
-import About from '../pages/About/'
-import AllPrograms from '../pages/Programs/'
-import Credentials from '../pages/Credentials/'
-import FrontPage from '../pages/FrontPage/'
+import {  About,
+          AllPrograms,
+          Credentials,
+          FrontPage } from '../pages/'
 
 const breakpointValues = {
   xs: 0,
@@ -89,18 +89,16 @@ const App = () =>
               }
             </AuthUserContext.Consumer>
           } />
-          <Route path={routes.public_landing} component={() => 
-            <PublicInterface>
-              <Switch>
-                <Route exact path="/" component={FrontPage} />
-                <Route exact path="/credentials" component={Credentials} />
-                <Route exact path="/programs" component={AllPrograms} />
-                <Route path="/programs/vigenere-cipher" component={VigenereCipher} />
-                <Route path="/programs/grid-list-view" component={GridListView} />
-                <Route path="/programs/data-tree" component={DataTree} />
-                <Route path="/about" component={About} />
-              </Switch>
-            </PublicInterface>
+          
+          <PublicInterface>
+            <Route exact path="/" component={FrontPage} />
+            <Route path="/credentials" component={Credentials} />
+            <Route exact path="/programs" component={AllPrograms} />
+            <Route path="/programs/vigenere-cipher" component={VigenereCipher} />
+            <Route path="/programs/grid-list-view" component={GridListView} />
+            <Route path="/programs/data-tree" component={DataTree} />
+            <Route path="/about" component={About} />
+          </PublicInterface>
           } />
         </Switch>
       </React.Fragment>

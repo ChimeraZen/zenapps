@@ -1,7 +1,6 @@
 // Config
 import React from 'react'
-import { db, storage } from '../../config/firebase/firebase'
-import { NavLink } from 'react-router-dom'
+import { storage } from '../../config/firebase/firebase'
 
 // Styles
 import './styles.css'
@@ -9,7 +8,6 @@ import {  Paper,
           Icon,
           List,
           ListItem,
-          ListItemIcon,
           ListItemText,
           Typography } from '@material-ui/core'
 
@@ -36,20 +34,11 @@ class Contact extends React.Component {
     return (
       <Paper className="contact-page" elevation={0} square={true}>
         <div className="small-column">
-          <Typography className="light-text" variant="Display1" component="h2">
-            <a href="https://www.gitkraken.com" target="_blank">GitKraken Version Control</a>
-          </Typography>
-          {
-            this.state.image !== null && 
-              <img src={this.state.image} className="image"/>
-          }
-        </div>
-        <div className="small-column">
           <Typography className="title light-text" variant="title" component="h2">
             Like what you see?
           </Typography>
           <Typography paragraph component="p" className="light-text">
-            This entire site has been built using <a href="https://www.reactjs.org/" target="_blank">React</a> and <a href="https://www.netlify.com/" target="_blank">Netlify.com</a>
+            This entire site has been built using <a href="https://www.reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> and <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify.com</a>
           </Typography>
           <Typography paragraph component="p" className="light-text">
             Since starting to learn React, I have developed my skills to the point where I've built a user-authorized administrative dashboard, and front-end website.
@@ -76,6 +65,15 @@ class Contact extends React.Component {
               <ListItemText primary="Elijah Liedtke" />
             </ListItem>
           </List>
+        </div>
+        <div className="medium-column">
+          <Typography className="light-text" variant="display1" component="h2">
+            <a href="https://www.gitkraken.com" target="_blank" rel="noopener noreferrer">GitKraken Version Control</a>
+          </Typography>
+          {
+            this.state.image !== null && 
+              <img src={this.state.image} className="image" alt="GitKraken Sample" />
+          }
         </div>
       </Paper>
     )

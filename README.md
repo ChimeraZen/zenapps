@@ -2,7 +2,7 @@
   
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.5.5](#v155)  
+**Version**:      [1.5.6](#v156)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps
 
@@ -30,6 +30,21 @@
 ---
 
 ## ChangeLog
+### v1.5.6
+* Removed unnecessary files
+* Updated:
+  * App.js
+    * Corrected issue with double root route
+    * Corrected issue with new imports needed
+  * Contact component-page
+  * Credentials component-page
+  * ProgramDetails component-page
+  * FrontPage page
+  * AllPrograms page
+* Set global font-family
+* Cleaned up PublicInterface component
+
+
 ### v1.5.5
 * Added LinkedIn contact to Contact component-page
 

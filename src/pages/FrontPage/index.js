@@ -5,7 +5,7 @@ import React from 'react'
 import {  About,
           Contact,
           Credentials,
-          AllPrograms } from '../'
+          ProgramDetails } from '../'
 
 // Styles
 import './styles.css'
@@ -15,7 +15,7 @@ const FrontPage = () =>
   <Paper className="front-page" elevation={0} square={true}>
     <Contact />
     <Credentials />
-    <AllPrograms />
+    <ProgramDetails />
     <About />
   </Paper>
 

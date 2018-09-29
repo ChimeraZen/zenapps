@@ -28,10 +28,9 @@ class PublicInterface extends React.Component {
       .get()
       .then(snap => {
         const sidebar = snap.data()
-
         this.setState({
           drawerOpen: true,
-          sidebar
+          sidebar: sidebar
         })
       })
   }
@@ -43,12 +42,8 @@ class PublicInterface extends React.Component {
   }
 
   render() {
-    return this.state === null
-      ? <div className="circular-progress">
-          <CircularProgress className="circular-progress" size={50} />
-        </div>
-      
-      : <React.Fragment>
+    return this.state !== null
+      ? <React.Fragment>
           <AppBar className="public-interface-appBar" position="static">
             <Toolbar disableGutters>
               <IconButton
@@ -78,6 +73,9 @@ class PublicInterface extends React.Component {
             </div>
           </div>
         </React.Fragment>
+      : <div className="circular-progress">
+          <CircularProgress className="circular-progress" size={50} />
+        </div>
   }
 }
 

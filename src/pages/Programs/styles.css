@@ -1,3 +1,11 @@
+.all-programs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: stretch;
+  padding: 5px;
+}
+
 .programs-page {
   display: flex;
   justify-content: center;
