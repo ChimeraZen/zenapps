@@ -1,7 +1,9 @@
 import AllPrograms from './AllPrograms'
-import ProgramDetails from './ProgramDetails'
+import ProgramPage from './ProgramPage'
+import VigenereCipherPage from './VigenereCipherPage'
 
 export {
   AllPrograms,
-  ProgramDetails,
+  ProgramPage,
+  VigenereCipherPage,
 }

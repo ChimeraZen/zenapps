@@ -34,14 +34,14 @@ import SignInForm from './admin/SignIn'
 // Programs
 import DataTree from './DataTree'
 import { GridListView } from './GridListView'
-import VigenereCipher from './VigenereCipher'
 
 
 // Pages
 import {  About,
           AllPrograms,
           Credentials,
-          FrontPage } from '../pages/'
+          FrontPage,
+          VigenereCipherPage } from '../pages/'
 
 const breakpointValues = {
   xs: 0,
@@ -94,7 +94,7 @@ const App = () =>
             <Route exact path="/" component={FrontPage} />
             <Route path="/credentials" component={Credentials} />
             <Route exact path="/programs" component={AllPrograms} />
-            <Route path="/programs/vigenere-cipher" component={VigenereCipher} />
+            <Route path="/programs/vigenere-cipher" component={VigenereCipherPage} />
             <Route path="/programs/grid-list-view" component={GridListView} />
             <Route path="/programs/data-tree" component={DataTree} />
             <Route path="/about" component={About} />

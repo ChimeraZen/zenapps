@@ -1,8 +1,8 @@
-// Congig 
+// Config 
 import React from 'react'
 import * as api from './api'
 
-class CipherForm extends React.Component {
+export default class CipherForm extends React.Component {
   componentDidMount() {
     const labels = api.getFormLabels(),
           demoVals = api.getDemoValues(),
@@ -130,5 +130,3 @@ class CipherForm extends React.Component {
       </form>
   }
 }
-
-export default CipherForm

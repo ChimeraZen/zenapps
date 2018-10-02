@@ -1,33 +1,35 @@
-.credentials-page {
+.programs-page {
   display: flex;
   justify-content: center;
-  padding: 5px;
   flex-wrap: wrap;
+  padding: 5px;
+  background-color: #2a5475 !important;
 }
 
-.credentials-page .card {
+.programs-page .card {
   display: flex;
   flex-wrap: wrap;
   flex-basis: 300px;
   min-width: 300px;
   margin-bottom: 15px;
+  background: #fff;
 }
 
-.credentials-page .card:last-child {
+.programs-page .card:last-child {
   margin-bottom: 0;
 }
 
-.credentials-page .position {
+.programs-page .position {
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.credentials-page .row {
+.programs-page .row {
   display: flex;
   justify-content: space-between;
 }
 
-.credentials-page .title {
+.programs-page .title {
   padding-left: 5px;
   margin-bottom: 3px;
   border-left: 3px solid #4caf50;

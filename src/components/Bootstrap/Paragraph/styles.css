@@ -1,0 +1,8 @@
+.paragraph {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.paragraph.with-padding {
+  padding: 5px;
+}

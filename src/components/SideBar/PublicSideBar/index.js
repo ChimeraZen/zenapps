@@ -99,13 +99,6 @@ class PublicSideBar extends React.Component {
           </ListItem>
           <Collapse in={this.state.open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <NavLink to='/programs'>
-                <ListItem button className="public-sidebar-nested">
-                  <ListItemText>
-                    Show All
-                  </ListItemText>
-                </ListItem>
-              </NavLink>
 
               <NavLink to='/programs/vigenere-cipher'>
                 <ListItem button className="public-sidebar-nested">
@@ -114,7 +107,15 @@ class PublicSideBar extends React.Component {
                   </ListItemText>
                 </ListItem>
               </NavLink>
-
+{/*
+              <NavLink to='/programs'>
+                <ListItem button className="public-sidebar-nested">
+                  <ListItemText>
+                    Show All
+                  </ListItemText>
+                </ListItem>
+              </NavLink>
+              
               <NavLink to='/programs/grid-list-view'>
                 <ListItem button className="public-sidebar-nested">
                   <ListItemText>
@@ -130,6 +131,7 @@ class PublicSideBar extends React.Component {
                   </ListItemText>
                 </ListItem>
               </NavLink>
+*/}
             </List>
           </Collapse>
 

@@ -2,7 +2,7 @@
   
 **Description**:  ZenApps is a React.js website to showcase my personal projects
 
-**Version**:      [1.5.6](#v156)  
+**Version**:      [1.5.7](#v157)  
 **Author**:       Elijah Liedtke (Chimera.Zen)  
 **Link**:         https://github.com/ChimeraZen/ZenApps
 
@@ -30,6 +30,15 @@
 ---
 
 ## ChangeLog
+### v1.5.7
+* Created Bootstrap components
+* Updated VigenereCipher component to include examples of code
+* Updated all components and pages with new Bootstrap components
+* Updated PublicSideBar to remove links to unfinished program pages
+* Updated ToggleSlider
+
+
+
 ### v1.5.6
 * Removed unnecessary files
 * Updated:

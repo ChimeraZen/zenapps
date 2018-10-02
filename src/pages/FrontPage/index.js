@@ -5,18 +5,17 @@ import React from 'react'
 import {  About,
           Contact,
           Credentials,
-          ProgramDetails } from '../'
+          ProgramPage } from '../'
 
 // Styles
 import './styles.css'
-import { Paper } from '@material-ui/core'
 
 const FrontPage = () =>
-  <Paper className="front-page" elevation={0} square={true}>
+  <div className="front-page">
     <Contact />
     <Credentials />
-    <ProgramDetails />
+    <ProgramPage />
     <About />
-  </Paper>
+  </div>
 
 export default FrontPage

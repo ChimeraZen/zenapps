@@ -1,6 +1,7 @@
-.about-page {
+.all-programs {
   display: flex;
   justify-content: center;
-  padding: 5px;
   flex-wrap: wrap;
+  width: stretch;
+  padding: 5px;
 }

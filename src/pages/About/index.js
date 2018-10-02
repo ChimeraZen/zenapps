@@ -2,10 +2,13 @@
 import React from 'react'
 import { db } from '../../config/firebase/firebase'
 
+// Components
+import {  Column,
+          Row } from '../../components/Bootstrap'
+
 // Styles
 import './styles.css'
-import {  Paper,
-          Typography } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 
 class About extends React.Component {
   componentDidMount() {
@@ -22,9 +25,9 @@ class About extends React.Component {
   
   render() {
     return this.state !== null &&
-      <Paper className="about-page" elevation={0} square={true}>
+      <Row className="about-page" withPadding>
         {this.state.page.map((item, i) => 
-          <div key={"item" + i} className="small-column">
+          <Column key={"item" + i} type="small" withPadding>
             <Typography className="title" variant="title" component="h2">
               {item.title}
             </Typography>
@@ -33,9 +36,9 @@ class About extends React.Component {
                 {paragraph}
               </Typography>
             )}
-          </div>
+          </Column>
         )}
-      </Paper>
+      </Row>
   }
 }
 

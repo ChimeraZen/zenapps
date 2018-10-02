@@ -1,11 +1,12 @@
+// Config
 import React from 'react'
 
 // Components
-import { ToggleSlider } from '../Toggles'
+import ToggleSlider from '../Toggles/ToggleSlider'
 
 export default class Header extends React.Component {
   state = {
-    isOpen: true
+    isOpen: false
   }
 
   handleOptionsDisplay = () => {

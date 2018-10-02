@@ -1,18 +1,19 @@
 // Config
 import React from 'react'
-import { db } from '../../config/firebase/firebase'
+import { db } from '../../../config/firebase/firebase'
 import { NavLink } from 'react-router-dom'
 
 // Components
-import Card from '../../components/Card/'
-import { LinearMeter } from '../../components/Meters/'
+import {  Column,
+          Row } from '../../../components/Bootstrap'
+import Card from '../../../components/Card/'
+import { LinearMeter } from '../../../components/Meters/'
 
 // Styles
 import './styles.css'
 import {  Card as MuiCard,
           CardContent,
           Divider,
-          Paper,
           Typography } from '@material-ui/core'
 
 
@@ -32,8 +33,8 @@ export class ProgramDetails extends React.Component {
   
   render() {
     return this.state !== null &&
-      <Paper className="programs-page" elevation={0} square={true}>
-        <div className="small-column">
+      <Row className="programs-page" withPadding>
+        <Column type="small" withPadding>
           <Card title="Languages" className="light-text">
             <LinearMeter title="HTML5" percent="100" />
             <LinearMeter title="CSS3" percent="98" />
@@ -42,8 +43,8 @@ export class ProgramDetails extends React.Component {
             <LinearMeter title="MySQL" percent="90" />
             <LinearMeter title="ReactJS" percent="85" />
           </Card>
-        </div>
-        <div className="small-column">
+        </Column>
+        <Column type="small" withPadding>
           {this.state.programs.map((program, i) =>
             <MuiCard key={"program" + i} className="card" elevation={1}>
               <CardContent className="cardContent">
@@ -63,8 +64,8 @@ export class ProgramDetails extends React.Component {
               </CardContent>
             </MuiCard>
           )}
-        </div>
-        <div className="small-column">
+        </Column>
+        <Column type="small" withPadding>
           <Typography className="title light-text" variant="title" component="h2">
             My Programs
           </Typography>
@@ -74,15 +75,15 @@ export class ProgramDetails extends React.Component {
           <Typography paragraph component="p" className="light-text">
             Since starting to learn React, I have developed my skills to the point where I've built a user-authorized administrative dashboard, and front-end website. Through a secure connection to Google Firebase, I have been able to build an object-based database and, with a custom API, organize and return the database information in a usable format.
           </Typography>
-        </div>
-        <div className="small-column">
+        </Column>
+        <Column type="small" withPadding>
           <Card title="Skills" className="light-text">
             <LinearMeter title="Scripting/Web Design" percent="100" />
             <LinearMeter title="Object-Oriented Programming" percent="95" />
             <LinearMeter title="React Component Development" percent="95" />
           </Card>
-        </div>
-      </Paper>
+        </Column>
+      </Row>
   }
 }
 export default ProgramDetails

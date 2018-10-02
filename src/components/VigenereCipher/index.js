@@ -5,11 +5,12 @@ import React from 'react'
 import Header from './Header'
 import CipherForm from './CipherForm'
 
+// Styles
 import './styles.css'
 
 export default class VigenereCipher extends React.Component {
   state = {
-    isDemo: true,
+    isDemo: this.props.demo ? true : false,
     isDecrypt: true,
   }
 
@@ -24,7 +25,7 @@ export default class VigenereCipher extends React.Component {
   render() {
     return (
       <div className="vigenere-cipher">
-        <Header handleMode={this.handleMode} handleDemo={this.handleDemo}>Vigenere Cipher</Header>
+        <Header handleMode={this.handleMode} handleDemo={this.handleDemo}>Vigenère Cipher</Header>
         <CipherForm isDecrypt={this.state.isDecrypt} isDemo={this.state.isDemo}/>
       </div>
     )

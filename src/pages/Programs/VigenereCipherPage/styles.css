@@ -1,0 +1,11 @@
+.vigenere-cipher-page {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  background-color: #FFF;
+}
+
+.vigenere-cipher-page > .row:nth-child(odd) {
+  color: #FFF;
+  background-color: #2a5475;
+}

@@ -1,7 +1,11 @@
 .front-page {
   display: flex;
   flex-direction: column;
-  background-color: #2a5475 !important;
+}
+
+.front-page > .row:nth-child(odd) {
+  color: #FFF;
+  background-color: #2a5475;
 }
 
 .front-page .column {

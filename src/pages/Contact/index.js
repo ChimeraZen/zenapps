@@ -2,10 +2,13 @@
 import React from 'react'
 import { storage } from '../../config/firebase/firebase'
 
+// Components
+import {  Column,
+          Row } from '../../components/Bootstrap'
+
 // Styles
 import './styles.css'
-import {  Paper,
-          Icon,
+import {  Icon,
           List,
           ListItem,
           ListItemText,
@@ -32,8 +35,8 @@ class Contact extends React.Component {
   
   render() {
     return (
-      <Paper className="contact-page" elevation={0} square={true}>
-        <div className="small-column">
+      <Row className="contact-page" withPadding>
+        <Column type="small" withPadding>
           <Typography className="title light-text" variant="title" component="h2">
             Like what you see?
           </Typography>
@@ -65,8 +68,8 @@ class Contact extends React.Component {
               <ListItemText primary="Elijah Liedtke" />
             </ListItem>
           </List>
-        </div>
-        <div className="medium-column">
+        </Column>
+        <Column type="medium" withPadding>
           <Typography className="light-text" variant="display1" component="h2">
             <a href="https://www.gitkraken.com" target="_blank" rel="noopener noreferrer">GitKraken Version Control</a>
           </Typography>
@@ -74,8 +77,8 @@ class Contact extends React.Component {
             this.state.image !== null && 
               <img src={this.state.image} className="image" alt="GitKraken Sample" />
           }
-        </div>
-      </Paper>
+        </Column>
+      </Row>
     )
   }
 }

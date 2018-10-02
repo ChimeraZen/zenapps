@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.css'
 
 // The component will default to On & Off if a true or false prop has not been supplied as a string
-class ToggleSlider extends React.Component {
+export default class ToggleSlider extends React.Component {
   componentDidMount() {
     const left = this.props.left ? this.props.left : "On",
           right = this.props.right ? this.props.right : "Off",
@@ -32,5 +32,3 @@ class ToggleSlider extends React.Component {
       </div>
   }
 }
-
-export default ToggleSlider
