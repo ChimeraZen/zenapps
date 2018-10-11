@@ -1,153 +1,95 @@
+// Config
 import React from 'react'
 import { storage } from '../../../config/firebase/firebase'
 import { NavLink } from 'react-router-dom'
 
-import {  Avatar,
-          Collapse,
-          Divider,
-          IconButton,
+
+// Components
+import {  DropList,
+          DropListItem } from '../../Lists/DropList'
+
+import {  IconButton,
           List,
           ListItem,
           ListItemIcon,
           ListItemText } from '@material-ui/core'
 
-import BuildIcon from '@material-ui/icons/Build'
-//import GestureIcon from '@material-ui/icons/Gesture'
-import SchoolIcon from '@material-ui/icons/School'
-import AccountCircleIcon from '@material-ui/icons/AccountCircle'
-import { ExpandLess, ExpandMore } from '@material-ui/icons'
-
-
 // Styles
 import './styles.css'
 
 class PublicSideBar extends React.Component {
-  state = {
-    avatar: "",
-    open: false,
-  }
-  
-  handleClick = () => {
-    this.setState({ open: !this.state.open })
-  }
-  
   componentDidMount() {
     storage.ref(this.props.params.image)
       .getDownloadURL()
       .then(src => {
         this.setState({
-          avatar: src
+          avatar: src,
+          open: false,
         })
       })
   }
   
   render() {
-    const styles = this.props.isOpen ? {marginLeft: "-241px"} : {marginLeft: "0"}
-    return (
-      <div className="public-sidebar" style={styles}>
-        <NavLink to='/'>
-          <Avatar 
-            alt={this.props.params.name} 
-            src={this.state.avatar}
-            className="public-sidebar-avatar" />
-        </NavLink>
-          
-        <List className="public-sidebar-quickLinks">
-          {
-            this.props.params.quicklinks.map((quickLink, index) => {
-              return (
-                <ListItem 
-                  key={quickLink.title + index}
-                  disableGutters 
-                  component="a" 
-                  href={quickLink.link}
-                  title={quickLink.title}
-                  className="public-sidebar-listItem">
-                  <IconButton color="secondary" aria-label={quickLink.title}>
-                    <i className={quickLink.icon}></i>
-                  </IconButton>
-                </ListItem>
+    return this.state !== null && 
+      <div className="public-sidebar-container">
+        <div className={this.props.isOpen ? "public-sidebar closed" : "public-sidebar"}>
+          <div className="public-sidebar-avatar">
+            <img 
+              alt={this.props.params.name} 
+              src={this.state.avatar}
+            />
+          </div>
+
+          <DropList>
+            <DropListItem title="Credentials">
+              <NavLink to="/credentials">
+                <i className="fas fa-user-graduate"></i>
+                <span>Credentials</span>
+              </NavLink>
+            </DropListItem>
+
+            <DropListItem type="droppable" title="Programs">
+              <NavLink to="/programs">
+                <i className="fas fa-code-branch"></i>
+                <span>Programs</span>
+              </NavLink>
+
+              <DropList>
+                <DropListItem title="Vigenere Cipher">
+                  <NavLink to="/programs/vigenere-cipher">
+                    <i className="fas fa-code-branch"></i>
+                    <span>Vigenere Cipher</span>
+                  </NavLink>
+                </DropListItem>
+              </DropList>
+            </DropListItem>
+
+            <DropListItem title="Contact">
+              <NavLink to="/contact">
+                <i className="fas fa-pencil-alt"></i>
+                <span>Contact</span>
+              </NavLink>
+            </DropListItem>
+
+            <DropListItem title="Credentials">
+              <NavLink to="/about">
+                <i className="fas fa-question"></i>
+                <span>About</span>
+              </NavLink>
+            </DropListItem>
+          </DropList>
+
+          <div className="public-sidebar-quickLinks">
+            {
+              this.props.params.quicklinks.map((quickLink, index) => 
+                <NavLink to={quickLink.link} key={quickLink.title + index} title={quickLink.title} className="public-sidebar-listItem">
+                  <i className={quickLink.icon}></i>
+                </NavLink>
               )
-            })
-          }
-        </List>
-
-        <Divider />
-
-        <List
-          className=""
-          component="nav"
-        >
-
-          <NavLink to='/credentials'>
-            <ListItem button>
-              <ListItemIcon>
-                <SchoolIcon />
-              </ListItemIcon>
-              <ListItemText inset>
-                Credentials
-              </ListItemText>
-            </ListItem>
-          </NavLink>
-
-          <ListItem button onClick={this.handleClick}>
-            <ListItemIcon>
-              <BuildIcon />
-            </ListItemIcon>
-            <ListItemText inset primary="Programs" />
-            {this.state.open ? <ExpandLess /> : <ExpandMore />}
-          </ListItem>
-          <Collapse in={this.state.open} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-
-              <NavLink to='/programs/vigenere-cipher'>
-                <ListItem button className="public-sidebar-nested">
-                  <ListItemText>
-                    Vigenere Cipher
-                  </ListItemText>
-                </ListItem>
-              </NavLink>
-{/*
-              <NavLink to='/programs'>
-                <ListItem button className="public-sidebar-nested">
-                  <ListItemText>
-                    Show All
-                  </ListItemText>
-                </ListItem>
-              </NavLink>
-              
-              <NavLink to='/programs/grid-list-view'>
-                <ListItem button className="public-sidebar-nested">
-                  <ListItemText>
-                    Grid-List View
-                  </ListItemText>
-                </ListItem>
-              </NavLink>
-
-              <NavLink to='/programs/data-tree'>
-                <ListItem button className="public-sidebar-nested">
-                  <ListItemText>
-                    Data Tree
-                  </ListItemText>
-                </ListItem>
-              </NavLink>
-*/}
-            </List>
-          </Collapse>
-
-          <NavLink to='/about'>
-            <ListItem button>
-              <ListItemIcon>
-                <AccountCircleIcon />
-              </ListItemIcon>
-              <ListItemText inset>
-                About
-              </ListItemText>
-            </ListItem>
-          </NavLink>
-        </List>
+            }
+          </div>
+        </div>
       </div>
-    )
   }
 }
 

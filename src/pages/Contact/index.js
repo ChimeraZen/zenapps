@@ -4,7 +4,10 @@ import { storage } from '../../config/firebase/firebase'
 
 // Components
 import {  Column,
-          Row } from '../../components/Bootstrap'
+          Paragraph,
+          Row,
+          TextBlock,
+          Title } from '../../components/Bootstrap'
 
 // Styles
 import './styles.css'
@@ -35,23 +38,23 @@ class Contact extends React.Component {
   
   render() {
     return (
-      <Row className="contact-page" withPadding>
+      <Row className="contact-page" withPadding withWrap>
         <Column type="small" withPadding>
-          <Typography className="title light-text" variant="title" component="h2">
-            Like what you see?
-          </Typography>
-          <Typography paragraph component="p" className="light-text">
-            This entire site has been built using <a href="https://www.reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> and <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify.com</a>
-          </Typography>
-          <Typography paragraph component="p" className="light-text">
-            Since starting to learn React, I have developed my skills to the point where I've built a user-authorized administrative dashboard, and front-end website.
-          </Typography>
-          <Typography paragraph component="p" className="light-text">
-            Through a secure connection to Google Firebase, I have been able to build an object-based database and, with a custom API, organize and return the database information in a usable format.
-          </Typography>
-          
+          <TextBlock lightText>
+            <Title type="simple">Like what you see?</Title>
+            <Paragraph>
+              This entire site has been built using <a href="https://www.reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> and <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify.com</a>
+            </Paragraph>
+            <Paragraph>
+              Since starting to learn React, I have developed my skills to the point where I've built a user-authorized administrative dashboard, and front-end website.
+            </Paragraph>
+            <Paragraph>
+              Through a secure connection to Google Firebase, I have been able to build an object-based database and, with a custom API, organize and return the database information in a usable format.
+            </Paragraph>
+          </TextBlock>
+
           <div className="light-divider"></div>
-          
+
           <List component="nav" className="light-text" disablePadding={true}>
             <ListItem button component="a" href="mailto:eli_lied@hotmail.com">
               <EmailIcon />
@@ -69,6 +72,7 @@ class Contact extends React.Component {
             </ListItem>
           </List>
         </Column>
+
         <Column type="medium" withPadding>
           <Typography className="light-text" variant="display1" component="h2">
             <a href="https://www.gitkraken.com" target="_blank" rel="noopener noreferrer">GitKraken Version Control</a>

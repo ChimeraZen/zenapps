@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  min-width: 200px;
   max-width: 500px;
   margin: auto;
   color: #000;

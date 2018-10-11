@@ -4,10 +4,12 @@ import React from 'react'
 // Styles
 import './styles.css'
 
-export const Row = (props) => {
-  const classNames = ["row"]
+export const TextBlock = (props) => {
+  const classNames = ["text-block"]
   
-  props.withWrap && classNames.push("with-wrap")
+  
+  props.lightText && classNames.push("light-text")
+  props.darkText && classNames.push("dark-text")
   props.withPadding && classNames.push("with-padding")
   props.className && classNames.push(props.className)
   
@@ -18,4 +20,4 @@ export const Row = (props) => {
   )
 }
 
-export default Row
+export default TextBlock

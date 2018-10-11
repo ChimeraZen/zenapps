@@ -1,47 +1,62 @@
+// Config
 import React from 'react'
-import PropTypes from 'prop-types'
 
+// Styles
 import './styles.css'
 
 export const Column = (props) => {
-  const classNames = []
+  const classNames = ["column"]
   
+  props.fullWidth && classNames.push("full-width")
   props.withPadding && classNames.push("with-padding")
   props.className && classNames.push(props.className)
   
   switch(props.type) {
     case "small":
-      classNames.unshift("small-column")
       return (
-        <div className={classNames.join(" ")}>
-          {props.children}
+        <div className="small-column">
+          <div className={classNames.join(" ")}>
+            {props.children}
+          </div>
         </div>
       )
       
     case "medium":
-      classNames.unshift("medium-column")
       return (
-        <div className={classNames.join(" ")}>
-          {props.children}
+        <div className="medium-column">
+          <div className={classNames.join(" ")}>
+            {props.children}
+          </div>
         </div>
       )
       
     case "large":
-      classNames.unshift("large-column")
       return (
-        <div className={classNames.join(" ")}>
-          {props.children}
+        <div className="large-column">
+          <div className={classNames.join(" ")}>
+            {props.children}
+          </div>
+        </div>
+      )
+      
+    case "full":
+      return (
+        <div className="full-column">
+          <div className={classNames.join(" ")}>
+            {props.children}
+          </div>
         </div>
       )
       
     default:
-      break
-      
+      return (
+        <div className="column">
+          <div className={classNames.join(" ")}>
+            {props.children}
+          </div>
+        </div>
+      )
   }
-}
-
-Column.propTypes = {
-  type: PropTypes.string.isRequired,
 }
 
 export default Column

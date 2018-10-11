@@ -1,12 +1,15 @@
 .simple-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
   border: 1px solid darkgrey;
   color: #000;
   background: #FFF;
 }
 
 .simple-list-item {
+  display: flex;
+  width: 100%;
   padding: 10px 20px;
   list-style-type: none;
   transition: background .1s ease-in;
@@ -18,6 +21,7 @@
 }
 
 .simple-list-title {
+  width: 100%;
   padding: 10px;
   border-bottom: 1px solid darkgrey;
 }

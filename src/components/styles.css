@@ -3,10 +3,10 @@
   margin: 0;
 }
 
-body {
+html, body {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   font-family: 'Encode Sans Condensed', sans-serif;
   background-color: #FFF;
   overflow: hidden;
@@ -33,14 +33,8 @@ ul, h3 {
 }
 
 #root {
-  display: flex;
-  flex-wrap: wrap;
-  width: stretch;
-  height: stretch;
-}
-
-.flex {
-  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .circular-progress {
@@ -62,11 +56,13 @@ ul, h3 {
 }
 
 .light-divider {
+  width: stretch;
   border: 1px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 20px;
 }
 
 .dark-divider {
+  width: stretch;
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
 }

@@ -1,8 +1,4 @@
 .contact-page {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 5px;
   background-color: #2a5475 !important;
 }
 

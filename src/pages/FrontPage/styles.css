@@ -1,25 +1,7 @@
 .front-page {
-  display: flex;
-  flex-direction: column;
 }
 
 .front-page > .row:nth-child(odd) {
   color: #FFF;
   background-color: #2a5475;
-}
-
-.front-page .column {
-  padding-top: 10px;
-  padding-left: 5px;
-}
-
-.front-page .column-3 {
-}
-
-.dark-text {
-  color: #000 !important;
-}
-
-.light-text {
-  color: #FFF !important;
 }

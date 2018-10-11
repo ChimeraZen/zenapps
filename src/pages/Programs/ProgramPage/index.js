@@ -5,7 +5,10 @@ import { NavLink } from 'react-router-dom'
 
 // Components
 import {  Column,
-          Row } from '../../../components/Bootstrap'
+          Paragraph,
+          Row,
+          TextBlock,
+          Title } from '../../../components/Bootstrap'
 import Card from '../../../components/Card/'
 import { LinearMeter } from '../../../components/Meters/'
 
@@ -33,7 +36,8 @@ export class ProgramDetails extends React.Component {
   
   render() {
     return this.state !== null &&
-      <Row className="programs-page" withPadding>
+      <Row className="programs-page" withWrap withPadding>
+        
         <Column type="small" withPadding>
           <Card title="Languages" className="light-text">
             <LinearMeter title="HTML5" percent="100" />
@@ -44,38 +48,45 @@ export class ProgramDetails extends React.Component {
             <LinearMeter title="ReactJS" percent="85" />
           </Card>
         </Column>
-        <Column type="small" withPadding>
-          {this.state.programs.map((program, i) =>
-            <MuiCard key={"program" + i} className="card" elevation={1}>
-              <CardContent className="cardContent">
-                <NavLink to={program.link}>
-                  <Typography className="position" variant="title" component="h3">
-                    {program.title}
-                  </Typography>
-                </NavLink>
-                <Typography className="position" variant="caption">
-                  {program.version}
-                </Typography>
-                <Divider />
+        
+        <Column type="medium">
+          {this.state.programs.map((program, i) => 
+            <Row key={"program" + i} withPadding>
+              <MuiCard key={"program" + i} className="card" elevation={1}>
+                <CardContent className="cardContent">
+                  <NavLink to={program.link}>
+                    <Typography className="position" variant="title" component="h3">
+                      {program.title}
+                    </Typography>
+                  </NavLink>
 
-                <Typography>
-                  {program.description}
-                </Typography>
-              </CardContent>
-            </MuiCard>
+                  <Typography className="position" variant="caption">
+                    {program.version}
+                  </Typography>
+
+                  <Divider />
+
+                  <Typography>
+                    {program.description}
+                  </Typography>
+                </CardContent>
+              </MuiCard>
+            </Row>
           )}
         </Column>
-        <Column type="small" withPadding>
-          <Typography className="title light-text" variant="title" component="h2">
-            My Programs
-          </Typography>
-          <Typography paragraph component="p" className="light-text">
-            Over the years, I've written many different scripts in many different languages. Whether I'm using PHP to query a MySQL database, jQuery/JavaScript to work with the DOM, or React to create a reusable component, I have a desire to follow a standard operating procedure.
-          </Typography>
-          <Typography paragraph component="p" className="light-text">
-            Since starting to learn React, I have developed my skills to the point where I've built a user-authorized administrative dashboard, and front-end website. Through a secure connection to Google Firebase, I have been able to build an object-based database and, with a custom API, organize and return the database information in a usable format.
-          </Typography>
+
+        <Column type="medium" withPadding>
+          <TextBlock>
+            <Title type="simple">My Programs</Title>
+            <Paragraph>
+              Over the years, I've written many different scripts in many different languages. Whether I'm using PHP to query a MySQL database, jQuery/JavaScript to work with the DOM, or React to create a reusable component, I have a desire to follow a standard operating procedure.
+            </Paragraph>
+            <Paragraph>
+              Since starting to learn React, I have developed my skills to the point where I've built a user-authorized administrative dashboard, and front-end website. Through a secure connection to Google Firebase, I have been able to build an object-based database and, with a custom API, organize and return the database information in a usable format.
+            </Paragraph>
+          </TextBlock>
         </Column>
+        
         <Column type="small" withPadding>
           <Card title="Skills" className="light-text">
             <LinearMeter title="Scripting/Web Design" percent="100" />

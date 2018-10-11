@@ -1,0 +1,63 @@
+.drop-list {
+  width: 100%;
+  height: auto;
+}
+
+.drop-list li {
+  overflow: hidden;
+  max-height: 48px;
+  transition: all 0.4s ease-out;
+}
+
+.drop-list li:hover {
+  background: rgba(0, 0, 0, 0.125);
+}
+
+.drop-list li i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+}
+
+.drop-list .drop-list-content {
+  width: 100%;
+}
+
+.drop-list .collapse-icon {
+  cursor: pointer;
+}
+
+.drop-list .collapsible-item .droplist-item-content {
+  max-height: 48px;
+  overflow: hidden;
+}
+
+.drop-list li.open {
+  max-height: 20em;
+  transition: all 0.35s ease-out;
+}
+
+.drop-list .sub-list {
+  background: rgba(0, 0, 0, 0.175);
+}
+
+.drop-list a {
+  display: inline-block;
+  width: calc(100% - 48px);
+  height: 100%;
+  color: inherit;
+}
+
+.drop-list .fa-chevron-down {
+  display: inline-flex;
+  margin-left: auto;
+  transform: rotateZ(-0deg);
+  transition: all 0.3s ease-out;
+}
+
+.drop-list .fa-chevron-down.rotate-180 {
+  transform: rotateZ(180deg);
+  transition: all 0.3s ease-out;
+}

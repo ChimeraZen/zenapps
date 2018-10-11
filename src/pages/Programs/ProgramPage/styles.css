@@ -1,17 +1,12 @@
 .programs-page {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 5px;
-  background-color: #2a5475 !important;
+  background-color: #2a5475;
 }
 
 .programs-page .card {
   display: flex;
-  flex-wrap: wrap;
-  flex-basis: 300px;
-  min-width: 300px;
-  margin-bottom: 15px;
+  flex-direction: column;
+  width: 100%;
+  min-width: 200px;
   background: #fff;
 }
 
@@ -22,15 +17,4 @@
 .programs-page .position {
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.programs-page .row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.programs-page .title {
-  padding-left: 5px;
-  margin-bottom: 3px;
-  border-left: 3px solid #4caf50;
 }

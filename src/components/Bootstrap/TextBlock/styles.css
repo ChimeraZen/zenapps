@@ -1,0 +1,8 @@
+.text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-block.with-padding {
+  padding: 10px;
+}
