@@ -74,13 +74,15 @@ class Contact extends React.Component {
         </Column>
 
         <Column type="medium" withPadding>
-          <Typography className="light-text" variant="display1" component="h2">
-            <a href="https://www.gitkraken.com" target="_blank" rel="noopener noreferrer">GitKraken Version Control</a>
-          </Typography>
-          {
-            this.state.image !== null && 
-              <img src={this.state.image} className="image" alt="GitKraken Sample" />
-          }
+          <TextBlock lightText>
+            <Title type="simple">
+              <a href="https://www.gitkraken.com" target="_blank" rel="noopener noreferrer">GitKraken Version Control</a>
+            </Title>
+          </TextBlock>
+          
+          <a href={this.state.image !== null && this.state.image}>
+            <img src={this.state.image !== null && this.state.image} className="image" alt="GitKraken Sample" />
+          </a>
         </Column>
       </Row>
     )
