@@ -25,7 +25,11 @@
 }
 
 .public-interface .titleRow h2 {
-  margin-right: 5px;
+  margin-right: 20px;
+}
+
+.public-interface .titleRow .titleCaption {
+  max-width: 100px;
 }
 
 .public-interface .interface {

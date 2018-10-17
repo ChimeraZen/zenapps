@@ -8,12 +8,6 @@ import { NavLink } from 'react-router-dom'
 import {  DropList,
           DropListItem } from '../../Lists/DropList'
 
-import {  IconButton,
-          List,
-          ListItem,
-          ListItemIcon,
-          ListItemText } from '@material-ui/core'
-
 // Styles
 import './styles.css'
 

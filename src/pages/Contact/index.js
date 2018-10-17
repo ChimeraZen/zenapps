@@ -14,8 +14,7 @@ import './styles.css'
 import {  Icon,
           List,
           ListItem,
-          ListItemText,
-          Typography } from '@material-ui/core'
+          ListItemText } from '@material-ui/core'
 
 import PhoneIcon from '@material-ui/icons/Phone'
 import EmailIcon from '@material-ui/icons/Email'

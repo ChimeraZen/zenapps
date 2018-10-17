@@ -76,7 +76,7 @@ export class ProgramDetails extends React.Component {
         </Column>
 
         <Column type="medium" withPadding>
-          <TextBlock>
+          <TextBlock lightText>
             <Title type="simple">My Programs</Title>
             <Paragraph>
               Over the years, I've written many different scripts in many different languages. Whether I'm using PHP to query a MySQL database, jQuery/JavaScript to work with the DOM, or React to create a reusable component, I have a desire to follow a standard operating procedure.
