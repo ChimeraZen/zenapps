@@ -76,9 +76,9 @@ class PublicSideBar extends React.Component {
           <div className="public-sidebar-quickLinks">
             {
               this.props.params.quicklinks.map((quickLink, index) => 
-                <NavLink to={quickLink.link} key={quickLink.title + index} title={quickLink.title} className="public-sidebar-listItem">
+                <a href={quickLink.link} key={quickLink.title + index} title={quickLink.title} className="public-sidebar-listItem">
                   <i className={quickLink.icon}></i>
-                </NavLink>
+                </a>
               )
             }
           </div>
